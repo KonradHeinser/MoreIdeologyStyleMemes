@@ -1,4 +1,91 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+    <MemeGroupDef>
+        <defName>MISM_FleshAugmentation</defName>
+        <drawOffset>(0.37, 0.23)</drawOffset>
+        <maxRows>1</maxRows>
+        <renderOrder>0</renderOrder>
+    </MemeGroupDef>
+    
+    <MemeGroupDef>
+        <defName>MISM_Proselythism</defName>
+        <drawOffset>(0.37, 0.23)</drawOffset>
+        <maxRows>1</maxRows>
+        <renderOrder>1900</renderOrder>
+    </MemeGroupDef>
 
+    <MemeDef>
+        <defName>MISM_Follower</defName>
+        <label>follower</label>
+        <description>Belief is not to another, but naturally sought.</description>
+        <iconPath>MISMFollower</iconPath>
+        <groupDef>MISM_Proselythism</groupDef>
+        <impact>2</impact>
+        <renderOrder>80</renderOrder>
+        <generalRules>
+            <rulesStrings>
+                <li>memeAdjective->true</li>
+                <li>memeAdjective->real</li>
+                <li>memeHyphenPrefix->truth</li>
+                <li>memeConcept->truth</li>
+                <li>memeLeaderNoun->worshiper</li>
+                <li>memeMoralist->follower</li>
+                <li>memeMoralist->believer</li>
+            </rulesStrings>
+        </generalRules>
+        <descriptionMaker>
+            <rules>
+                <rulesStrings>
+                    <!-- theist myth -->
+                    <li>creation(tag=meme_Follower)        ->[deity0_name] anointed a few among mortals to hear [deity0_possessive] word.</li>
+                    <li>episode(uses=1,tag=meme_Follower)  ->[deity0_name] said to all the [memberNamePlural], "Go forth and remember my word so it may guide you to righteousness."</li>
+                    <!-- theist founder -->
+                    <li>intro(tag=meme_Follower)           ->[memberNamePlural] built a great [altarName] on the [place_summary] [place_name], so that believers could come to hear [deity0_name]'s divine word.</li>
+                    <li>conflict(tag=meme_Follower)        ->A spiteful [foeLeader], seeking to deny the word of [deity0_name], told [foeLeader_possessive] [foeSoldiers] to cut out the eyes of any who worship the [deity0_type].</li>
+                    <li>founderJoin(tag=meme_Follower)     ->[deity0_name] blessed a [place_job] named [founderName] with great wisdom, and none could turn away when [founder_pronoun] spoke.</li>
+                    <li>victory(tag=meme_Follower)         ->[founderName] admonished the [foeSoldiers], reminding them that belief through force only creates evil, and they put down their [place_personalWeapon]s.</li>
+                    <!-- ideological founder -->
+                    <li>setup(tag=meme_Follower)           ->Our founder [founderName] traveled between the cities seeking truth, and found it within themselves.</li>
+                    <li>story(uses=1,tag=meme_Follower)    ->The believers moved between cities and institutions, seeking the wisdom of the new righteousness.</li>
+                    <!-- ideological lesson -->
+                    <li>lessonIntro(tag=meme_Follower)         ->In all my years spreading our truth, I learned one lesson that stands over all:</li>
+                    <li>lesson(tag=meme_Follower)              ->forcing our beliefs on others would be a crime</li>
+                    <li>lessonReinforcement(tag=meme_Follower) ->If one does not come to believe of their own will, their belief will always be tainted!</li>
+                    <!-- archist -->
+                    <li>archistBasis(tag=meme_Follower)    ->The archotechs announce their presence from the sky, and in the mind, to gather those who wish to believe.</li>
+                    <li>archistFact(tag=meme_Follower)     ->Archotechs touch those who believe, and guide them to the truth of the world.</li>
+                    <li>archistProphecy(tag=meme_Follower) ->[inTheEnd], the archotechs will voice their final wisdom to the holder of the [relic0_name], who must always accept those who come to learn, to see, to observe.</li>
+                    <!-- animist -->
+                    <li>animistFact(tag=meme_Follower)     ->The spirits want to be known, but only speak to a few. They want us to bring this knowledge inward, to truly understand why we must believe this way, and to realize others much reach the same point through their own wisdom.</li>
+                </rulesStrings>
+            </rules>
+        </descriptionMaker>
+        <requireOne>
+          <li>
+            <li>Proselytizing_Never</li>
+            <li>Proselytizing_Rare</li>
+          </li>
+        </requireOne>
+        <symbolPacks>
+            <li>
+                <ideoName>Truth</ideoName>
+                <theme>truth</theme>
+                <adjective>truthist</adjective>
+                <member>truthist</member>
+            </li>
+            <li>
+                <ideoName>Verity</ideoName>
+                <theme>verity</theme>
+                <adjective>veritic</adjective>
+                <member>veritist</member>
+            </li>
+            <li>
+                <ideoName>Reality</ideoName>
+                <theme>reality</theme>
+                <adjective>realitic</adjective>
+                <member>realitist</member>
+            </li>
+        </symbolPacks>
+    </MemeDef>
+    
 </Defs>

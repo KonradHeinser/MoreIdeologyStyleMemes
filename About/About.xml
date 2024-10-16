@@ -24,15 +24,20 @@
   <description>
 This mod seeks to extend the meme options Ideology offers to offer the opposite end of various spectrums. You can make an ideology obsessed with tunneling underground, but can't make one that hates it. You can make ideologies that love trees, but not one that hate them. You have a Meme for worshiping bloodfeeders, but what about a Meme for wanting to kill them all?
 
-Unlike More Biotech Style Genes, this will not seek to create a full, in-depth, range of options from minor to major, but instead stick to just the extremes to avoid flooding the memes and precepts menu with too many options. This currently only adds 7 Memes and 1 Precept.
+Unlike More Biotech Style Genes, this will not seek to create a full, in-depth, range of options from minor to major, but instead stick to just the extremes to avoid flooding the memes and precepts menu with too many options. 
+
+
+This currently adds 6-7 Memes and 3 Precepts.
 
 - Adds Farmer Meme, opposite of Rancher
 - Adds Charity Meme, opposite of Raider
 - Adds Sterile Life Meme, opposite of High Life
 - Adds Overworlder Meme, opposite of Tunneler
-- Adds Barren Meme, opposite of Tree Connection
+- Adds Barren Connection Meme, opposite of Tree Connection. Adds a related Trees Hated Precepts
+- Adds Follower Meme, opposite of Proselytizer. Adds two related precepts to make proselytizing rarer
 - For those with Biotech, adds Purifier meme, opposite of Bloodfeeder
 - Updates Flesh Purity and Transhumanist to correctly display as mutually exclusive in the menu
+    Flesh Purity is still incompatible with High Life, but High Life is not moved to the category
 
 [url=https://discord.gg/fYP8qkcNDh]Discord link[/url] for those who want an easier way to ask questions, make requests, or just chat. I'll also be posting new releases there.
 
@@ -42,4 +47,3 @@ Unlike More Biotech Style Genes, this will not seek to create a full, in-depth, 
 [url=https://ko-fi.com/alite56114][img]https://i.imgur.com/Utx6OIH.png[/img][/url]
   </description>
 </ModMetaData>
-

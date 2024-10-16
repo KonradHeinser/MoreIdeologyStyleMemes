@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-    
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/MemeDef[defName="Transhumanist" or defName="FleshPurity"]/groupDef</xpath>
+        <value><groupDef>MISM_FleshAugmentation</groupDef></value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/MemeDef[defName="Proselytizer"]/groupDef</xpath>
+        <value><groupDef>MISM_Proselythism</groupDef></value>
+    </Operation>
+
 </Patch>

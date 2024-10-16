@@ -1,4 +1,186 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
+    <PreceptDef>
+        <defName>MISM_Trees_Hated</defName>
+        <issue>Trees</issue>
+        <label>hated</label>
+        <description>Trees invite insects and pests, and those bring diseases. Purging the world of their danger is our duty.</description>
+        <impact>Medium</impact>
+        <displayOrderInImpact>100</displayOrderInImpact>
+        <!-- <associatedMemes>
+            <li>MISM_BarrenConnection</li>
+        </associatedMemes> -->
+        <comps>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>TreesHated</thought>
+            </li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>TreeDensityPurged</thought>
+                <thoughtStageDescriptions>
+                    <li>Healthy trees</li>
+                    <li>Trees disturbed</li>
+                    <li>Trees defaced</li>
+                    <li>Trees damaged</li>
+                    <li>Trees harmed</li>
+                    <li>Trees defiled</li>
+                    <li>Trees wrecked</li>
+                    <li>Trees ravaged</li>
+                </thoughtStageDescriptions>
+            </li>
+        </comps>
+    </PreceptDef>
+    
+    <ThoughtDef>
+        <defName>TreesHated</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>ThoughtWorker_TreesDesired</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+        <stages>
+            <li>
+                <label>massive trees</label>
+                <description>I am surrounded by several massive, terrifying trees. What kind of dangers lurk within!</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+            <li>
+                <label>amazing tree</label>
+                <description>I very recently encountered a massive, terrifying tree!</description>
+                <baseMoodEffect>-8</baseMoodEffect>
+            </li>
+            <li>
+                <label>unsettling forest</label>
+                <description>I am surrounded by a lush forest.</description>
+                <baseMoodEffect>-7</baseMoodEffect>
+            </li>
+            <li>
+                <label>massive tree</label>
+                <description>I recently encountered a massive, terrifying tree.</description>
+                <baseMoodEffect>-6</baseMoodEffect>
+            </li>
+            <li>
+                <label>rich forest</label>
+                <description>I was recently surrounded by a lush forest.</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+            <li>
+                <label>full trees</label>
+                <description>I recently walked among many full trees.</description>
+                <baseMoodEffect>-4</baseMoodEffect>
+            </li>
+            <li>
+                <label>mixed trees</label>
+                <description>I recently walked among a wide variety of trees.</description>
+                <baseMoodEffect>-6</baseMoodEffect>
+            </li>
+            <li>
+                <label>full tree</label>
+                <description>I recently encountered a full tree.</description>
+                <baseMoodEffect>-4</baseMoodEffect>
+            </li>
+            <li>
+                <label>mini trees</label>
+                <description>I was recently surrounded by plenty of miniature trees.</description>
+                <baseMoodEffect>-4</baseMoodEffect>
+            </li>
+            <li>
+                <label>mini tree</label>
+                <description>I recently encountered a miniature tree.</description>
+                <baseMoodEffect>-2</baseMoodEffect>
+            </li>
+            <li>
+                <label>no tree</label>
+                <description>I haven't had to deal with trees and their pests in a while.</description>
+                <baseMoodEffect>2</baseMoodEffect>
+            </li>
+            <li>
+                <label>no tree</label>
+                <description>I haven't had to deal with trees and their pests in a while.</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+            <li>
+                <label>trees gone</label>
+                <description>It has been a while since I've been near a tree.</description>
+                <baseMoodEffect>8</baseMoodEffect>
+            </li>
+            <li>
+                <label>trees gone</label>
+                <description>It has been a long time since I've been near a tree.</description>
+                <baseMoodEffect>12</baseMoodEffect>
+            </li>
+            <li>
+                <label>barren land</label>
+                <description>It's been so long since I've had to be around a tree!</description>
+                <baseMoodEffect>15</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    
+    <ThoughtDef>
+        <defName>TreeDensityPurged</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>ThoughtWorker_Precept_TreeDensity</workerClass>
+        <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+        <stages>
+            <li>
+                <label>healthy trees</label>
+                <description>In the past quadrum, we didn't destroy many trees at all. Let's hope we don't suffer for our negligence.</description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+            <li>
+                <label>trees disturbed</label>
+                <description>In the past quadrum, we have destroyed a few trees.</description>
+                <baseMoodEffect>2</baseMoodEffect>
+            </li>
+            <li>
+                <label>trees defaced</label>
+                <description>In the past quadrum, we have destroyed a lot of trees.</description>
+                <baseMoodEffect>4</baseMoodEffect>
+            </li>
+            <li>
+                <label>trees damaged</label>
+                <description>In the past quadrum, we have destroyed many trees.</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+            <li>
+                <label>trees harmed</label>
+                <description>In the past quadrum, we have destroyed an decent number of trees.</description>
+                <baseMoodEffect>6</baseMoodEffect>
+            </li>
+            <li>
+                <label>trees defiled</label>
+                <description>In the past quadrum, we have destroyed a large number of trees.</description>
+                <baseMoodEffect>7</baseMoodEffect>
+            </li>
+            <li>
+                <label>trees wrecked</label>
+                <description>In the past quadrum, we have destroyed a very large number of trees. I can hear the leafy screams even now.</description>
+                <baseMoodEffect>8</baseMoodEffect>
+            </li>
+            <li>
+                <label>trees ravaged</label>
+                <description>In the past quadrum, we have destroyed an unbelievable number of trees. We are purging this forest no matter how much it fights us.</description>
+                <baseMoodEffect>10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    
+    <PreceptDef ParentName="ProselytizingBase">
+        <defName>Proselytizing_Never</defName>
+        <label>never</label>
+        <description>To force your beliefs on another is an unforgivable act.</description>
+        <displayOrderInIssue>40</displayOrderInIssue>
+        <statFactors>
+          <SocialIdeoSpreadFrequencyFactor>0</SocialIdeoSpreadFrequencyFactor>
+        </statFactors>
+    </PreceptDef>
+    
+    <PreceptDef ParentName="ProselytizingBase">
+        <defName>Proselytizing_Rare</defName>
+        <label>rare</label>
+        <description>To force your beliefs on another should only be done in very special circumstances.</description>
+        <displayOrderInIssue>30</displayOrderInIssue>
+        <statFactors>
+          <SocialIdeoSpreadFrequencyFactor>0.5</SocialIdeoSpreadFrequencyFactor>
+        </statFactors>
+    </PreceptDef>
 </Defs>
