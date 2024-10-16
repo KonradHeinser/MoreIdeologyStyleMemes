@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>More Ideology Style Memes</name>
+  <author>alite</author>
+  <packageId>MISM.Mod</packageId>
+  <supportedVersions>
+    <li>1.5</li>
+  </supportedVersions>
+  
+  <modDependencies>
+    <li>
+      <packageId>ludeon.rimworld.ideology</packageId>
+      <displayName>Ideology</displayName>
+    </li>
+  </modDependencies>
+
+  <loadAfter>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>Ludeon.RimWorld.Ideology</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>Ludeon.RimWorld.Anomaly</li>
+  </loadAfter>
+
+  <description>
+This mod seeks to extend the meme options Ideology offers to offer the opposite end of various spectrums. You can make an ideology obsessed with tunneling underground, but can't make one that hates it. You can make ideologies that love trees, but not one that hate them. You have a Meme for worshiping bloodfeeders, but what about a Meme for wanting to kill them all?
+
+Unlike More Biotech Style Genes, this will not seek to create a full, in-depth, range of options from minor to major, but instead stick to just the extremes to avoid flooding the memes and precepts menu with too many options. This currently only adds 7 Memes and 1 Precept.
+
+- Adds Farmer Meme, opposite of Rancher
+- Adds Charity Meme, opposite of Raider
+- Adds Sterile Life Meme, opposite of High Life
+- Adds Overworlder Meme, opposite of Tunneler
+- Adds Barren Meme, opposite of Tree Connection
+- For those with Biotech, adds Purifier meme, opposite of Bloodfeeder
+- Updates Flesh Purity and Transhumanist to correctly display as mutually exclusive in the menu
+
+[url=https://discord.gg/fYP8qkcNDh]Discord link[/url] for those who want an easier way to ask questions, make requests, or just chat. I'll also be posting new releases there.
+
+[url=https://steamcommunity.com/id/alite/myworkshopfiles/?appid=294100]Easy link to all of my Rimworld mods[/url]
+
+[url=https://github.com/KonradHeinser/][img]https://i.imgur.com/kTkpTOE.png[/img][/url]
+[url=https://ko-fi.com/alite56114][img]https://i.imgur.com/Utx6OIH.png[/img][/url]
+  </description>
+</ModMetaData>
+
