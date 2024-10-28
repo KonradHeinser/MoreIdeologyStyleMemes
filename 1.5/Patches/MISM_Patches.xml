@@ -10,4 +10,50 @@
         <value><groupDef>MISM_Proselythism</groupDef></value>
     </Operation>
 
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/MemeDef[defName="TreeConnection"]/groupDef</xpath>
+        <value><groupDef>MISM_TreeThought</groupDef></value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/MemeDef[defName="TreeConnection"]/exclusionTags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="TreeConnection"]</xpath>
+            <value>
+                <exclusionTags>
+                    <li>MISM_TreeConnection</li>
+                </exclusionTags>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="TreeConnection"]/exclusionTags</xpath>
+            <value>
+                <li>MISM_TreeConnection</li>
+            </value>
+        </match>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/MemeDef[defName="Rancher"]/groupDef</xpath>
+        <value><groupDef>MISM_Farmer</groupDef></value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/MemeDef[defName="Rancher"]/exclusionTags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="Rancher"]</xpath>
+            <value>
+                <exclusionTags>
+                    <li>MISM_FarmType</li>
+                </exclusionTags>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="Rancher"]/exclusionTags</xpath>
+            <value>
+                <li>MISM_FarmType</li>
+            </value>
+        </match>
+    </Operation>
+
 </Patch>

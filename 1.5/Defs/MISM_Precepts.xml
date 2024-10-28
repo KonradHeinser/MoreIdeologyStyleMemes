@@ -7,9 +7,9 @@
         <description>Trees invite insects and pests, and those bring diseases. Purging the world of their danger is our duty.</description>
         <impact>Medium</impact>
         <displayOrderInImpact>100</displayOrderInImpact>
-        <!-- <associatedMemes>
+        <associatedMemes>
             <li>MISM_BarrenConnection</li>
-        </associatedMemes> -->
+        </associatedMemes>
         <comps>
             <li Class="PreceptComp_SituationalThought">
                 <thought>TreesHated</thought>
@@ -183,4 +183,102 @@
           <SocialIdeoSpreadFrequencyFactor>0.5</SocialIdeoSpreadFrequencyFactor>
         </statFactors>
     </PreceptDef>
+
+    <PreceptDef>
+        <defName>MISM_FarmingCentral</defName>
+        <issue>Ranching</issue>
+        <label>hated</label>
+        <description>We must grow crops frequently, and avoid raising large animals.</description>
+        <impact>Medium</impact>
+        <displayOrderInImpact>1000</displayOrderInImpact>
+        <requiredMemes>
+          <li>Rancher</li>
+        </requiredMemes>
+        <comps>
+          <li Class="PreceptComp_SituationalThought">
+            <thought>MISM_FarmingCentral_AnimalMassPerCapita</thought>
+            <thoughtStageDescriptions>
+              <li>No animals</li>
+              <li>Scarce animals {STAGE1}</li>
+              <li>Few animals {STAGE2}</li>
+              <li>Some animals {STAGE4}</li>
+              <li>Lots of animals {STAGE5}</li>
+              <li>Tons of animals</li>
+            </thoughtStageDescriptions>
+          </li>
+          <li Class="PreceptComp_SelfTookMemoryThought">
+            <eventDef>SowedHumanFoodPlant</eventDef>
+            <thought>MISM_FarmingSowedPlant</thought>
+          </li>
+          <li Class="PreceptComp_DevelopmentPoints">
+            <eventDef>HospitalitySuccess_Animals</eventDef>
+            <points>2</points>
+          </li>
+        </comps>
+        <statFactors>
+          <AnimalGatherSpeed>0.70</AnimalGatherSpeed>
+          <PlantHarvestYield>1.2</PlantHarvestYield>
+          <PlantWorkSpeed>1.2</PlantWorkSpeed>
+          <ForagedNutritionPerDay>1.2</ForagedNutritionPerDay>
+        </statFactors>
+        <statOffsets>
+          <AnimalProductsSellImprovement>-0.1</AnimalProductsSellImprovement>
+        </statOffsets>
+      </PreceptDef>
+    
+      <!-- Thoughts -->
+    
+      <!-- Ranching animal mass per capita -->
+      <ThoughtDef>
+        <defName>MISM_FarmingCentral_AnimalMassPerCapita</defName>
+        <workerClass>ThoughtWorker_Precept_AnimalBodySizePerCapita</workerClass>
+        <minExpectationForNegativeThought>Low</minExpectationForNegativeThought>
+        <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+        <stages>
+          <li>
+            <label>no animals</label>
+            <description>We have no animals at all! I have so much free time to spend on farming.</description>
+            <baseMoodEffect>3</baseMoodEffect>
+          </li>
+          <li>
+            <label>scarce animals</label>
+            <description>We have very few animals in our colony. This will give us time to focus on what truly matters.</description>
+            <baseMoodEffect>2</baseMoodEffect>
+          </li>
+          <li>
+            <label>few animals</label>
+            <description>We have few animals in our colony. It's alright.</description>
+            <baseMoodEffect>1</baseMoodEffect>
+          </li>
+          <li>
+            <label>some animals</label>
+            <description>It's bad to be raising animals here, so we should try removing some of them.</description>
+            <baseMoodEffect>-1</baseMoodEffect>
+          </li>
+          <li>
+            <label>lots of animals</label>
+            <description>It's horrible we're raising lots of animals here, and we should look at letting some of them go.</description>
+            <baseMoodEffect>-2</baseMoodEffect>
+          </li>
+          <li>
+            <label>tons of animals</label>
+            <description>Our ranch is thriving. Why do we let this distraction remain.</description>
+            <baseMoodEffect>-3</baseMoodEffect>
+          </li>
+        </stages>
+      </ThoughtDef>
+    
+      <ThoughtDef>
+        <defName>MISM_FarmingSowedPlant</defName>
+        <durationDays>2</durationDays>
+        <minExpectation>Low</minExpectation>
+        <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+        <stages>
+          <li>
+            <label>sowed human food plant</label>
+            <description>I sowed a plant. This allows us to truly connect with nature.</description>
+            <baseMoodEffect>4</baseMoodEffect>
+          </li>
+        </stages>
+      </ThoughtDef>
 </Defs>

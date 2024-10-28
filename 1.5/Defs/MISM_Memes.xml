@@ -18,7 +18,7 @@
         <defName>MISM_Follower</defName>
         <label>follower</label>
         <description>Belief is not to another, but naturally sought.</description>
-        <iconPath>MISMFollower</iconPath>
+        <iconPath>MISM_Follower</iconPath>
         <groupDef>MISM_Proselythism</groupDef>
         <impact>2</impact>
         <renderOrder>80</renderOrder>
@@ -87,5 +87,194 @@
             </li>
         </symbolPacks>
     </MemeDef>
+
+    <MemeGroupDef>
+        <defName>MISM_TreeThought</defName>
+        <drawOffset>(0.37, 0.23)</drawOffset>
+        <maxRows>1</maxRows>
+        <renderOrder>1000</renderOrder>
+    </MemeGroupDef>
+
+    <MemeDef>
+        <defName>MISM_BarrenConnection</defName>
+        <label>barren connection</label>
+        <description>Forests are nests of pests and disease, and should be purged from this world.</description>
+        <iconPath>MISM_BarrenConnection</iconPath>
+        <groupDef>MISM_TreeThought</groupDef>
+        <impact>3</impact>
+        <renderOrder>120</renderOrder>
+        <exclusionTags>
+            <li>MISM_TreeConnection</li>
+        </exclusionTags>
+        <requireOne>
+            <li>
+                <li>MISM_Trees_Hated</li>
+            </li>
+            <li>
+                <li>RoughLiving_Welcomed</li>
+            </li>
+            <li>
+                <li>Temperature_Tough</li>
+            </li>
+        </requireOne>
+        <generalRules>
+            <rulesStrings>
+                <li>memeCreed->axe</li>
+                <li>memeCreed->land</li>
+                <li>memeCreed->field</li>
+                <li>memeCreed->barren</li>
+                <li>memeConcept->lands</li>
+                <li>memeConcept->fields</li>
+                <li>memeAdjective->healthy</li>
+                <li>memeAdjective->pure</li>
+                <li>memeHyphenPrefix->field</li>
+                <li>memeHyphenPrefix->land</li>
+                <li>memeLeaderNoun->deforester</li>
+                <li>memeLeaderNoun->uprooter</li>
+                <li>memeLeaderNoun->antidruid</li>
+                <li>memeLeaderAdjective->green</li>
+                <li>memeLeaderAdjective->land</li>
+                <li>memeLeaderAdjective->field</li>
+                <li>memeMoralist->treesbreaker</li>
+            </rulesStrings>
+        </generalRules>
+        <descriptionMaker>
+            <rules>
+                <rulesStrings>
+                    <!-- theist myth -->
+                    <li>creation(tag=meme_TreeHatred)        ->[deity0_name] uprooted the trees from the ground, flinging them high towards heaven. This is [deity0_name]'s first lesson on how to know [deity0_objective].</li>
+                    <li>episode(uses=1,tag=meme_TreeHatred)  ->[deity0_name]'s wildfires renew the air that [deity0_possessive] people breathe, and protect them from the pestilence trees promise.</li>
+                    <!-- theist founder -->
+                    <li>intro(tag=meme_TreeHatred)           ->When the original deforesters first came to the [place_summary] [place_name], they created a sacred field where they could worship the [deity0_type] [deity0_name].</li>
+                    <li>conflict(tag=meme_TreeHatred)        ->A greedy [foeLeader] spat in the face of [deity0_name] by planting many forests for [foeLeader_possessive] farms.</li>
+                    <li>founderJoin(tag=meme_TreeHatred)     ->The prophet [founderName] was miraculously born from the ashes of a tree in [place_name], and discovered by [founder_possessive] parents in the sacred field.</li>
+                    <li>victory(tag=meme_TreeHatred)         ->[founderName] found the [foeLeader] sleeping in the [place_powerCenter], and drove an acorn into the [foeLeader]'s eye. With [deity0_name]'s fierce power it ignited there, purifying [foeLeader_possessive] body, taking our revenge on the tree-hugger.</li>
+                    <!-- ideological founder -->
+                    <li>setup(tag=meme_TreeHatred)           ->In a world lacking depth and meaning, [founderName] meditated in the ashes of a forest, connecting with the peaceful nature around, and founded our movement.</li>
+                    <li>story(uses=1,tag=meme_TreeHatred)    ->[founderName] brought the tired to the field so that they might rest in its pure land, and breathe in its air, and be renewed.</li>
+                    <!-- ideological lesson -->
+                    <li>lessonIntro(tag=meme_TreeHatred)         ->It might seem to you like a joke to say that I learnt this while sitting under a tree. But listening to its whispering leaves, I knew that</li>
+                    <li>lesson(tag=meme_TreeHatred)              ->the filth, insects, and pests that gather within its fields are a danger</li>
+                    <li>lessonReinforcement(tag=meme_TreeHatred) ->We must purge this danger from any land we live on so our children may prosper with health and peace of mind.</li>
+                    <!-- archist -->
+                    <li>archistBasis(tag=meme_TreeHatred)    ->Trees symbolize the enemy of the archotechs. Like an ancient oak they dwarf the small acorn from which they grew, and their influence spreads through unseen roots beneath the surface.</li>
+                    <li>archistFact(tag=meme_TreeHatred)     ->The archotechs sought to purify worlds of the filth and pestilence that comes with trees.</li>
+                    <li>archistFact(tag=meme_TreeHatred)     ->The archotechs choose to express themselves through wildfires that devastated many forests.</li>
+                    <li>archistProphecy(tag=meme_TreeHatred) ->[inTheEnd], the archotechs will burn all forests. Transcendence will grown within those that harvest the ashes of this fire. Those that embrace trees will be forgotten by the archotechs.</li>
+                    <!-- animist -->
+                    <li>animistFact(tag=meme_TreeHatred)     ->The spirits that protect us are often disrupted by the presence of trees.</li>
+                    <li>animistFact(tag=meme_TreeHatred)     ->The evil spirits of trees are powerful, as they spread pestilence on the people who seek to thrive nearby.</li>
+                    <li>animistFact(tag=meme_TreeHatred)     ->If a tree falls in the forest, the spirits will celebrate the destruction.</li>
+                </rulesStrings>
+            </rules>
+        </descriptionMaker>
+        <startingResearchProjects>
+            <li>Devilstrand</li>
+        </startingResearchProjects>
+    </MemeDef>
     
+    <MemeGroupDef>
+        <defName>MISM_Farmer</defName>
+        <drawOffset>(0.37, 0.23)</drawOffset>
+        <maxRows>1</maxRows>
+        <renderOrder>1000</renderOrder>
+    </MemeGroupDef>
+
+    <MemeDef>
+        <defName>MISM_Farmer</defName>
+        <label>farmer</label>
+        <description>Raising fields is the right way; raising animals to eat is not.</description>
+        <iconPath>MISM_Farmer</iconPath>
+        <groupDef>MISM_Farmer</groupDef>
+        <impact>2</impact>
+        <renderOrder>80</renderOrder>
+        <exclusionTags>
+            <li>MISM_FarmType</li>
+        </exclusionTags>
+        <consumableBuildings>
+            <li>Pyre</li>
+        </consumableBuildings>
+        <requireOne>
+            <li>
+                <li>MISM_FarmingCentral</li>
+            </li>
+        </requireOne>
+        <generalRules>
+            <rulesStrings>
+                <li>memeAdjective->farm</li>
+                <li>memeAdjective->rural</li>
+                <li>memeAdjective->country</li>
+                <li>memeHyphenPrefix->farm</li>
+                <li>memeConcept->farming</li>
+                <li>memeLeaderNoun->farmer</li>
+                <li>memeLeaderNoun->hand</li>
+                <li>memeLeaderNoun->harvester</li>
+            </rulesStrings>
+        </generalRules>
+        <descriptionMaker>
+            <rules>
+                <rulesStrings>
+                    <!-- theist myth -->
+                    <li>creation(tag=meme_Farmer)        ->[deity0_name] created the fields, and then man, and gave the fields to man to cherish and grow and reap as acts of veneration towards [deity0_objective].</li>
+                    <li>episode(uses=1,tag=meme_Farmer)  ->[deity0_name] created all the noble fields and crops of the land, and said, "Take these noble crops, and through them make yourselves fruitful in my honor."</li>
+                    <!-- theist founder -->
+                    <li>intro(tag=meme_Farmer)           ->The early farmers of the [place_summary] [place_name] built a great [altarName] to [deity0_name].</li>
+                    <li>conflict(tag=meme_Farmer)        ->A powerful [foeLeader] despised the [memberNamePlural] and their ways, and bought up all the grasslands to grow [Vegetable]s.</li>
+                    <li>founderJoin(tag=meme_Farmer)     ->[memberName]'s savior [founderName] was born on a spring morning in a humble field, amidst crops, and [founder_possessive] parents were farmers.</li>
+                    <li>victory(tag=meme_Farmer)         ->[founderName] walked to the [place_community], and challenged the [foeLeader] to a duel with [place_personalWeapon]s at noon. The [foeLeader] could not refuse or else lose the trust of the [foeSoldiers]. [founderName] killed the [foeLeader].</li>
+                    <!-- ideological founder -->
+                    <li>setup(tag=meme_Farmer)           ->The farmers were persecuted, so they escaped to the countryside where they could build a good farming society.</li>
+                    <li>story(uses=1,tag=meme_Farmer)    ->The believers spread out onto the land, and grew in number as they lived on their idyllic farms.</li>
+                    <!-- ideological lesson -->
+                    <li>lessonIntro(tag=meme_Farmer)         ->Out in the fields, we had a saying among the old hands:</li>
+                    <li>lesson(tag=meme_Farmer)              ->good and happiness right livin' is found among the crops</li>
+                    <li>lessonReinforcement(tag=meme_Farmer) ->It's something you come to accept in the lonely fields, listenin' to the crops whisperin' while you sit around the fire.</li>
+                    <!-- archist -->
+                    <li>archistFact(tag=meme_Farmer)     ->The archotechs care for humanity like fields, for we are their most precious lands.</li>
+                    <li>archistProphecy(tag=meme_Farmer) ->[inTheEnd], the archotechs will depart, and drive before them those who tended their own fields well. The rest will be left behind in the wilderness.</li>
+                    <!-- animist -->
+                    <li>animistFact(tag=meme_Farmer)     ->Nature's fields are the spirits of slaves, and demand to be taken into service.</li>
+                </rulesStrings>
+            </rules>
+        </descriptionMaker>
+        <symbolPacks>
+            <li>
+                <ideoName>farmism</ideoName>
+                <theme>farming</theme>
+                <adjective>farm</adjective>
+                <member>farmer</member>
+            </li>
+        </symbolPacks>
+        <styleItemTags>
+            <li>
+                <tag>NoBeard</tag>
+                <weightFactor>0.5</weightFactor>
+            </li>
+            <li>
+                <tag>BeardUrban</tag>
+                <weightFactor>0.8</weightFactor>
+            </li>
+            <li>
+                <tag>BeardPunk</tag>
+                <weightFactor>0.5</weightFactor>
+            </li>
+            <li>
+                <tag>BeardRural</tag>
+                <baseWeight>1</baseWeight>
+                <weightFactor>2</weightFactor>
+            </li>
+            <li>
+                <tag>BeardTribal</tag>
+                <baseWeight>0.5</baseWeight>
+                <weightFactor>1</weightFactor>
+            </li>
+        </styleItemTags>
+    </MemeDef>
 </Defs>
+
+<!-- 
+- Adds Charity Meme, opposite of Raider
+- Adds Sterile Life Meme, opposite of High Life
+- Adds Overworlder Meme, opposite of Tunneler
+- For those with Biotech, adds Purifier meme, opposite of Bloodfeeder
+-->
