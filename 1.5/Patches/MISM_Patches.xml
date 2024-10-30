@@ -56,4 +56,21 @@
         </match>
     </Operation>
 
+    <!--Specialists-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PreceptDef[defName="IdeoRole_MedicalSpecialist"]/requiredMemes</xpath>
+        <value>
+            <li>MISM_BarrenConnection</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PreceptDef[defName="IdeoRole_PlantSpecialist"]/requiredMemes</xpath>
+        <value>
+            <li>MISM_BarrenConnection</li>
+            <li>MISM_Farmer</li>
+        </value>
+    </Operation>
+
+
 </Patch>

@@ -273,8 +273,9 @@
 </Defs>
 
 <!-- 
-- Adds Charity Meme, opposite of Raider
-- Adds Sterile Life Meme, opposite of High Life
-- Adds Overworlder Meme, opposite of Tunneler
-- For those with Biotech, adds Purifier meme, opposite of Bloodfeeder
+- Adds Charity Meme, opposite of Raider (medical specialist and plant specialist)
+- Adds Sterile Life Meme, opposite of High Life (medical specialist)
+- Adds Overworlder Meme, opposite of Tunneler (production specialist)
+- Adds Mechanist Meme, neutral alternative to transhumanist and flesh purity. Gives mech speed when biotech active. (research specialist and production specialist)
+- For those with Biotech, adds Purifier meme, opposite of Bloodfeeding (medical specialist and melee specialist)
 -->

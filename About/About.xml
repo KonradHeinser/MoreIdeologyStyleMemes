@@ -35,7 +35,8 @@ This currently adds 6-7 Memes and 4 Precepts.
 - Adds Overworlder Meme, opposite of Tunneler
 - Adds Barren Connection Meme, opposite of Tree Connection. Adds a related Trees Hated precept
 - Adds Follower Meme, opposite of Proselytizer. Adds two related precepts to make proselytizing rarer
-- For those with Biotech, adds Purifier meme, opposite of Bloodfeeder
+- Adds Mechanist Meme, an alternative of TRanshumanist and Flesh Purity focused on research and production (and mechanoids if biotech active)
+- For those with Biotech, adds Purifier meme, opposite of Bloodfeeding
 - Updates Flesh Purity and Transhumanist to correctly display as mutually exclusive in the menu
     Flesh Purity is still incompatible with High Life, but High Life is not moved to the category
 
