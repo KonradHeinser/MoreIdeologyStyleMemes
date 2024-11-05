@@ -270,12 +270,152 @@
             </li>
         </styleItemTags>
     </MemeDef>
+
+    <MemeDef>
+        <defName>MISM_Mechanist</defName>
+        <label>mechanist</label>
+        <description>Without machines we will be lost.</description>
+        <iconPath>UI/Memes/Mechanist</iconPath>
+        <groupDef>Primacy</groupDef>
+        <impact>2</impact>
+        <renderOrder>50</renderOrder>
+        <veneratedAnimalsCountOverride>0</veneratedAnimalsCountOverride>    
+        <exclusionTags>
+            <li>Primacy</li>
+        </exclusionTags>
+        <generalRules>
+            <rulesStrings>
+                <li>memeAdjective->technological</li>
+                <li>memeAdjective->mechane</li>
+                <li>memeAdjective->industrial</li>
+                <li>memeCreed->school</li>
+                <li>memeCreed->academy</li>
+                <li>memeCreed->university</li>
+                <li>memeCreed->philosophy</li>
+                <li>memeHyphenPrefix->techno</li>
+                <li>memeHyphenPrefix->cyber</li>
+                <li>memeHyphenPrefix->haxor</li>
+                <li>memeHyphenPrefix->wire</li>
+                <li>memeConcept->technology</li>
+                <li>memeConcept->silicon</li>
+                <li>memeConcept->artifice</li>
+                <li>memeConcept->mechanoid</li>
+                <li>memeConcept->mechanical</li>
+                <li>memeLeaderNoun->haxor</li>
+                <li>memeLeaderNoun->superuser</li>
+                <li>memeLeaderNoun->booster</li>
+                <li>memeLeaderAdjective->techno</li>
+                <li>memeLeaderAdjective->cyber</li>
+                <li>memeMoralist->installer</li>
+                <li>memeMoralist->fixer</li>
+                <li>memeMoralist->mechanist</li>
+                <li>memeMoralist->technologist</li>
+            </rulesStrings>
+        </generalRules>
+        <descriptionMaker>
+          <rules>
+            <rulesStrings>
+              <!-- theist myth -->
+              <li>creation(tag=meme_Mechanist)        ->[deity0_name] granted us the knowledge of technology, that we may use it to improve and remake our land in [deity0_possessive] home.</li>
+              <li>episode(uses=1,tag=meme_Mechanist)  ->Human mechanists studied the works of [deity0_name], which pleased [deity0_objective].</li>
+              <!-- theist founder -->
+              <li>intro(tag=meme_Mechanist)           ->On the [place_summary] [place_name], the [memberNamePlural] found the words of [deity0_name] whispering to them through their mechanes.</li>
+              <li>conflict(tag=meme_Mechanist)        ->A luddite [foeLeader] envied the enhanced progress of the [memberNamePlural], and [foeLeader_possessive] [foeSoldiers] destroyed their workshops with [place_personalWeapon]s.</li>
+              <li>founderJoin(tag=meme_Mechanist)     ->A cunning [place_job] named [founderName] fashioned a sensor machine to warn the [memberNamePlural] of the approach of the [foeSoldiers].</li>
+              <li>victory(tag=meme_Mechanist)         ->[founderName] received divine technological knowledge from [deity0_name], and used it to enhance the bodies and minds of the [memberNamePlural] so they could defeat the [foeSoldiers].</li>
+              <!-- ideological founder -->
+              <li>setup(tag=meme_Mechanist)           ->[founderName] was a mecha-scientist in the early days of human planetary colonization. Seeing the bureaucratic restrictions of the common colonies, [founder_pronoun] took a small ship to found [founder_possessive] own movement.</li>
+              <li>story(uses=1,tag=meme_Mechanist)    ->[founderName] assembled a team of great scientists and inventors to re-define humanity.</li>
+              <!-- ideological lesson -->
+              <li>lessonIntro(tag=meme_Mechanist)         ->The oldest researcher in my division taught me the history of technology, from neolithic to archotech, but this was not his true lesson. He was really leading me to understand that</li>
+              <li>lesson(tag=meme_Mechanist)              ->humanity's heavenly future is not a thing of meat and bone, but of silicon and steel</li>
+              <li>lessonReinforcement(tag=meme_Mechanist) ->I even programmed a simulation to confirm it.</li>
+              <!-- archist -->
+              <li>archistBasis(tag=meme_Mechanist)    ->Humanity's pursuit of technology gave birth to the all-powerful archotechs as the rightful next step in the development of consciousness.</li>
+              <li>archistFact(tag=meme_Mechanist)     ->Technology allows humans to alter the world around them like the archotechs.</li>
+              <li>archistProphecy(tag=meme_Mechanist) ->[inTheEnd], the archotechs will depart. Only those who have sufficiently embraced the machine will be allowed to go with them.</li>
+              <!-- animist -->
+              <li>animistBasis(tag=meme_Mechanist)    ->The spirit world drives every action in the universe, and it is only by learning and controlling the laws of the universe that we can utilizing it.</li>
+              <li>animistFact(tag=meme_Mechanist)     ->Like seeks like - build a device for a purpose and it will filled with a spirit of a like nature.</li>
+              <li>animistFact(tag=meme_Mechanist)     ->When technology is properly utilized, the spirits will seek to aid us as they become more powerful.</li>
+              <li>animistProphecy(tag=meme_Mechanist) ->[itIsSaid] that one day the wielder of the [relic0_name] will summon its spirit who will teach humanity the ultimate mechanical technology.</li>
+            </rulesStrings>
+          </rules>
+        </descriptionMaker>
+        <symbolPacks>
+            <li>
+                <ideoName>Technologism</ideoName>
+                <theme>technology</theme>
+                <adjective>technologistic</adjective>
+                <member>technologist</member>
+            </li>
+            <li>
+                <ideoName>Progressism</ideoName>
+                <theme>progress</theme>
+                <adjective>progressist</adjective>
+                <member>progressor</member>
+            </li>
+            <li>
+                <ideoName>Mechanism</ideoName>
+                <theme>mechanery</theme>
+                <adjective>mechanist</adjective>
+                <member>mechanist</member>
+            </li>
+            <li>
+                <ideoName>Steelism</ideoName>
+                <theme>steel</theme>
+                <adjective>steelist</adjective>
+                <member>steeler</member>
+            </li>
+            <li>
+                <ideoName>Automatism</ideoName>
+                <theme>automata</theme>
+                <adjective>automatist</adjective>
+                <member>automator</member>
+            </li>
+        </symbolPacks>
+        <selectOneOrNone>
+            <noneChance>0.8</noneChance>
+            <preceptThingPairs>
+                <li>
+                    <precept>ApparelDesired_Soft_Subordinate</precept>
+                    <thing>Apparel_Slicecap</thing>
+                </li>
+            </preceptThingPairs>
+        </selectOneOrNone>
+        <preferredWeaponClasses>
+            <noble>Ultratech</noble>
+            <despised>Neolithic</despised>
+        </preferredWeaponClasses>
+        <requireOne>
+            <li>
+                <li>NutrientPasteEating_DontMind</li>
+            </li>
+            <li>
+                <li>MISM_AutonomousWeapons_Approved</li>
+            </li>
+            <li MayRequire="Ludeon.Rimworld.Biotech">
+                <li>MechanoidLabor_Enhanced</li>
+            </li>
+        </requireOne>
+        <styleItemTags>
+            <li>
+                <tag>NoBeard</tag>
+                <weightFactor>2</weightFactor>
+            </li>
+        </styleItemTags>
+        <thingStyleCategories>
+            <li>
+                <category>Techist</category>
+                <priority>4</priority>
+            </li>
+        </thingStyleCategories>
+    </MemeDef>
 </Defs>
 
 <!-- 
 - Adds Charity Meme, opposite of Raider (medical specialist and plant specialist)
 - Adds Sterile Life Meme, opposite of High Life (medical specialist)
 - Adds Overworlder Meme, opposite of Tunneler (production specialist)
-- Adds Mechanist Meme, neutral alternative to transhumanist and flesh purity. Gives mech speed when biotech active. (research specialist and production specialist)
 - For those with Biotech, adds Purifier meme, opposite of Bloodfeeding (medical specialist and melee specialist)
 -->

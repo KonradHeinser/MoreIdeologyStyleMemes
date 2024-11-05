@@ -27,7 +27,7 @@ This mod seeks to extend the meme options Ideology offers to offer the opposite 
 Unlike More Biotech Style Genes, this will not seek to create a full, in-depth, range of options from minor to major, but instead stick to just the extremes to avoid flooding the memes and precepts menu with too many options. 
 
 
-This currently adds 6-7 Memes and 4 Precepts.
+This currently adds 6-7 Memes and 5 Precepts.
 
 - Adds Farmer Meme, opposite of Rancher. Adds a related Ranching Hated precept
 - Adds Charity Meme, opposite of Raider
@@ -35,7 +35,7 @@ This currently adds 6-7 Memes and 4 Precepts.
 - Adds Overworlder Meme, opposite of Tunneler
 - Adds Barren Connection Meme, opposite of Tree Connection. Adds a related Trees Hated precept
 - Adds Follower Meme, opposite of Proselytizer. Adds two related precepts to make proselytizing rarer
-- Adds Mechanist Meme, an alternative of TRanshumanist and Flesh Purity focused on research and production (and mechanoids if biotech active)
+- Adds Mechanist Meme, an alternative of Nature Primacy and Human Primacy focused on research, production, mechanical weapons, and mechanoids if biotech active. Adds a related Automated Turret Approved precept
 - For those with Biotech, adds Purifier meme, opposite of Bloodfeeding
 - Updates Flesh Purity and Transhumanist to correctly display as mutually exclusive in the menu
     Flesh Purity is still incompatible with High Life, but High Life is not moved to the category

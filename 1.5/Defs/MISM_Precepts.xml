@@ -266,9 +266,9 @@
             <baseMoodEffect>-3</baseMoodEffect>
           </li>
         </stages>
-      </ThoughtDef>
+	</ThoughtDef>
     
-      <ThoughtDef>
+	<ThoughtDef>
         <defName>MISM_FarmingSowedPlant</defName>
         <durationDays>2</durationDays>
         <minExpectation>Low</minExpectation>
@@ -280,5 +280,38 @@
             <baseMoodEffect>4</baseMoodEffect>
           </li>
         </stages>
-      </ThoughtDef>
+	</ThoughtDef>
+
+	<PreceptDef>
+		<defName>MISM_AutonomousWeapons_Approved</defName>
+		<issue>AutonomousWeapons</issue>
+		<label>approved</label>
+		<description>We must use machines to guard ourselves. Limiting ourselves to fleshy protectors will only lead to ruin.</description>
+		<impact>Medium</impact>
+		<displayOrderInIssue>-10</displayOrderInIssue>
+		<displayOrderInImpact>100</displayOrderInImpact>
+		<associatedMemes>
+		  <li>MISM_Mechanist</li>
+		</associatedMemes>
+		<comps>
+		  <li Class="PreceptComp_SituationalThought">
+			<thought>MISM_HasAutonomousWeapons_Approved</thought>
+			<description>Automated weapon in colony</description>
+		  </li>
+		</comps>
+	</PreceptDef>
+
+	<ThoughtDef>
+		<defName>MISM_HasAutonomousWeapons_Approved</defName>
+		<workerClass>ThoughtWorker_Precept_HasAutomatedTurrets</workerClass>
+		<doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+		<stages>
+		  <li>
+			<label>automated weapons</label>
+			<description>We use automated weapons. I feel safer with their constant protection.</description>
+			<baseMoodEffect>3</baseMoodEffect>
+		  </li>
+		</stages>
+	</ThoughtDef>
+	
 </Defs>

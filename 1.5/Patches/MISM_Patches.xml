@@ -72,5 +72,18 @@
         </value>
     </Operation>
 
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PreceptDef[defName="IdeoRole_ProductionSpecialist"]/requiredMemes</xpath>
+        <value>
+            <li>MISM_Mechanist</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PreceptDef[defName="IdeoRole_ResearchSpecialist"]/requiredMemes</xpath>
+        <value>
+            <li>MISM_Mechanist</li>
+        </value>
+    </Operation>
 
 </Patch>
