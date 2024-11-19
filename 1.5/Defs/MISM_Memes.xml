@@ -412,12 +412,19 @@
         </thingStyleCategories>
     </MemeDef>
 
+    <MemeGroupDef>
+        <defName>MISM_DrugLife</defName>
+        <drawOffset>(0.37, 0.23)</drawOffset>
+        <maxRows>1</maxRows>
+        <renderOrder>100</renderOrder>
+    </MemeGroupDef>
+
     <MemeDef>
         <defName>MISM_SterileLife</defName>
         <label>sterile life</label>
-        <description>Exotic states of mind are central to a good life.</description>
-        <iconPath>UI/Memes/SterileLife</iconPath>
-        <groupDef>Misc</groupDef>
+        <description>We must not allow ourselves to succumb to the poisons of recreational drugs, and instead focus our minds in other areas.</description>
+        <iconPath>MISM_SterileLife</iconPath>
+        <groupDef>MISM_DrugLife</groupDef>
         <impact>2</impact>
         <renderOrder>999</renderOrder>
         <consumableBuildings>
@@ -428,7 +435,7 @@
         </exclusionTags>
         <requireOne>
           <li>
-            <li>DrugUse_Essential</li>
+            <li>DrugUse_MedicalOnly</li>
           </li>
         </requireOne>
         <requiredRituals>
@@ -445,16 +452,12 @@
             <li>memeAdjective->sterile</li>
             <li>memeConcept->medicine</li>
             <li>memeConcept->health</li>
-            <li>memeHyphenPrefix->drug</li>
-            <li>memeHyphenPrefix->narco</li>
-            <li>memeLeaderNoun->sleeper</li>
-            <li>memeLeaderNoun->doper</li>
-            <li>memeLeaderNoun->smoker</li>
-            <li>memeLeaderNoun->chiller</li>
-            <li>memeMoralist->philosophizer</li>
-            <li>memeMoralist->abstractor</li>
-            <li>memeMoralist->laugher</li>
-            <li>memeMoralist->giggler</li>
+            <li>memeHyphenPrefix->medicine</li>
+            <li>memeLeaderNoun->medic</li>
+            <li>memeLeaderNoun->doctor</li>
+            <li>memeLeaderNoun->surgeon</li>
+            <li>memeMoralist->rejuvenator</li>
+            <li>memeMoralist->healer</li>
           </rulesStrings>
         </generalRules>
         <descriptionMaker>
@@ -511,9 +514,6 @@
             <member>ecstator</member>
           </li>
         </symbolPacks>
-        <addDesignatorGroups>
-          <li>Floor_MindbendCarpet</li>
-        </addDesignatorGroups>
         <addDesignators>
           <li>Autobong</li>
         </addDesignators>
