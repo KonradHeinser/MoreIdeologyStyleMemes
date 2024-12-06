@@ -1,4 +1,46 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
+    <ThingDef ParentName="IdeoSmokerBase">
+        <defName>Burnbong</defName>
+        <label>burnbong</label>
+        <description>A wood structure packed with smokeleaf. It can be ignited during a ritual and produce a huge amount of smokeleaf smoke for a few hours, after which it is destroyed.</description>
+        <drawerType>RealtimeOnly</drawerType>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Things/Building/Misc/Burnbong/Burnbong</texPath>
+            <drawSize>(1.2,1.2)</drawSize>
+            <shadowData>
+                <volume>(0.92, 1 ,0.92)</volume>
+            </shadowData>
+        </graphicData>
+        <size>(1,1)</size>
+        <costList>
+            <WoodLog>30</WoodLog>
+            <SmokeleafLeaves>150</SmokeleafLeaves>
+        </costList>
+        <killedLeavings>
+        <SmokeleafLeaves>150</SmokeleafLeaves>
+        </killedLeavings>
+        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <statBases>
+        <MaxHitPoints>50</MaxHitPoints>
+        <WorkToBuild>10000</WorkToBuild>
+        <Mass>25</Mass>
+        </statBases>
+        <comps>
+        <li Class="CompProperties_RitualTargetEffecterSpawner">
+            <effecter>BurnbongSmoke</effecter>
+        </li>
+        <li Class="CompProperties_FireOverlayRitual">
+            <fireSize>0.5</fireSize>
+            <offset>(0, 0, 0.42)</offset>
+        </li>
+        <li Class="CompProperties_RitualHediffGiverInRoom">
+            <hediff>SmokeleafHigh</hediff>
+            <resetLastRecreationalDrugTick>true</resetLastRecreationalDrugTick>
+            <minRadius>10</minRadius>
+            <severity>0.01</severity>
+        </li>
+        </comps>
+    </ThingDef>
 </Defs>
