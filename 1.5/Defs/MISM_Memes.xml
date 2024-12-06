@@ -17,7 +17,7 @@
     <MemeDef>
         <defName>MISM_Follower</defName>
         <label>follower</label>
-        <description>Belief is not to another, but naturally sought.</description>
+        <description>Belief is not for another to decide upon, but for one to naturally seek.</description>
         <iconPath>MISM_Follower</iconPath>
         <groupDef>MISM_Proselythism</groupDef>
         <impact>2</impact>
@@ -68,7 +68,7 @@
         </requireOne>
         <symbolPacks>
             <li>
-                <ideoName>Truth</ideoName>
+                <ideoName>Truthism</ideoName>
                 <theme>truth</theme>
                 <adjective>truthist</adjective>
                 <member>truthist</member>
@@ -239,7 +239,7 @@
         </descriptionMaker>
         <symbolPacks>
             <li>
-                <ideoName>farmism</ideoName>
+                <ideoName>Farmism</ideoName>
                 <theme>farming</theme>
                 <adjective>farm</adjective>
                 <member>farmer</member>
@@ -508,10 +508,101 @@
             <DrugDesire>-1</DrugDesire>
         </agreeableTraits>
     </MemeDef>
+
+    <MemeGroupDef>
+        <defName>MISM_Welcome</defName>
+        <drawOffset>(0.37, 0.23)</drawOffset>
+        <maxRows>1</maxRows>
+        <renderOrder>70</renderOrder>
+    </MemeGroupDef>
+
+    <MemeDef>
+        <defName>MISM_Hospitality</defName>
+        <label>hospitality</label>
+        <description>We must do what we can to ensure those who visit our colony, do not feel unwelcome. Those who arrive with destruction in their minds should be given the chance to leave peacefully should they survive the initial conflict, assuming they do not wish to join us.</description>
+        <iconPath>MISM_Hospitality</iconPath>
+        <groupDef>MISM_Welcome</groupDef>
+        <impact>2</impact>
+        <renderOrder>71</renderOrder>
+        <exclusionTags>
+            <li>MISM_Welcome</li>
+        </exclusionTags>
+        <requireOne>
+            <li>
+                <li>Slavery_Disapproved</li>
+                <li>Slavery_Horrible</li>
+                <li>Slavery_Abhorrent</li>
+            </li>
+            <li>
+                <li>Charity_Essential</li>
+                <li>Charity_Important</li>
+                <li>Charity_Worthwhile</li>
+            </li>
+            <li>
+                <li>Execution_Abhorrent</li>
+                <li>Execution_Horrible</li>
+            </li>
+        </requireOne>
+        <generalRules>
+        <rulesStrings>
+            <li>memeAdjective->helping</li>
+            <li>memeHyphenPrefix->provide</li>
+            <li>memeConcept->helping</li>
+            <li>memeConcept->providing</li>
+            <li>memeLeaderNoun->provider</li>
+            <li>memeLeaderNoun->helper</li>
+            <li>memeMoralist->guider</li>
+        </rulesStrings>
+        </generalRules>
+        <descriptionMaker>
+        <rules>
+            <rulesStrings>
+                <!-- theist myth -->
+                <li>creation(tag=meme_Hosptiality)        ->In the endless war among deities, [deity0_name] rose above all in [deity0_possessive] ability to protect those spirits weaker than itself.</li>
+                <li>episode(uses=1,tag=meme_Hosptiality)  ->[deity0_name] guided the weaker spirits around [deity0_objective], and together they rose higher than ever.</li>
+                <!-- theist founder -->
+                <li>intro(tag=meme_Hosptiality)           ->The [place_summary] [place_name] was originally a raider hideout. [deity0_name] drove them away to turn the once dangerous place into a home of hope.</li>
+                <li>conflict(tag=meme_Hosptiality)        ->A [foeLeader] tried to force everyone into servitude, and declared [foeLeader_objective]self an enemy of [deity0_name].</li>
+                <li>founderJoin(tag=meme_Hosptiality)     ->A great leader named [founderName] arose, and [founder_possessive] followers joined [founderName] in [founder_possessive] to take [place_name] from the [foeSoldiers] and turn it into an unbreakable bastion of hope.</li>
+                <li>victory(tag=meme_Hosptiality)         ->[founderName] and the [memberNamePlural] repelled the [foeSoldiers] for many years without ever allowing themselve to stoop to their level, and eventually the [foeLeader] was forced to surrender as the [foeSoldiers] gradually gave up.</li>
+                <!-- ideological founder -->
+                <li>setup(tag=meme_Hosptiality)           ->Falsely persecuted and imprisoned, [founderName] managed to escaped, and formed a new colony, one which would never allow another suffer as much as [founder_objective].</li>
+                <li>story(uses=1,tag=meme_Hosptiality)    ->One day while walking the streets, [founderName] was surrounded by filthy beggars. [founder_pronoun] gave everything on [founder_possessive] person, and offered the beggars a new place in which they could always find hope for a better future.</li>
+                <!-- ideological lesson -->
+                <li>lessonIntro(tag=meme_Hosptiality)         ->All people have many lessons to offer you so long as you listen. One old lady taught me that</li>
+                <li>lesson(tag=meme_Hosptiality)              ->safety is never guaranteed, so you should offer solace for the defenseless whenever you can</li>
+                <li>lesson(tag=meme_Hosptiality)              ->material wealth is worthless compared to the satisfaction of giving to those without hope</li>
+                <li>lesson(tag=meme_Hosptiality)              ->life is a fragile thing, but together we can grow stronger</li>
+                <li>lessonReinforcement(tag=meme_Hosptiality) ->No matter who comes to request my help, they my home to be a welcoming place.</li>
+                <!-- archist -->
+                <li>archistBasis(tag=meme_Hosptiality)    -> The archotechs rose to the position they have today by working together, and ensuring none would fall behind simply because they could not fulfill their basic needs.</li>
+                <li>archistFact(tag=meme_Hosptiality)     ->The archotechs built a utopia by working as a team, and accepted all who approached them for aid as one of their own.</li>
+                <li>archistProphecy(tag=meme_Hosptiality) ->[inTheEnd], humanity will use an archotech relic, [relic0_name], to commune with the archotechs, who will bring aid to all who need it.</li>
+                <!-- animist -->
+                <li>animistFact(tag=meme_Hosptiality)     ->The most powerful spirits will often protect the weaker spirits from hostile ones, and those weaker spirits often guide desperate humans to hope to encourage humans to act the same.</li>
+                <li>animistProphecy(tag=meme_Hosptiality) ->Our universe will finalize when we unite as one and ensure none suffer unjustly, and every spirit sees it and joins us in celebration.</li>
+            </rulesStrings>
+        </rules>
+        </descriptionMaker>
+        <symbolPacks>
+            <li>
+                <ideoName>Helpism</ideoName>
+                <theme>helping</theme>
+                <adjective>helpful</adjective>
+                <member>helper</member>
+            </li>
+            <li>
+                <ideoName>Providism</ideoName>
+                <theme>providing</theme>
+                <adjective>providing</adjective>
+                <member>provider</member>
+            </li>
+        </symbolPacks>
+    </MemeDef>
+
 </Defs>
 
 <!-- 
-- Adds Charity Meme, opposite of Raider (medical specialist and plant specialist)
 - Adds Overworlder Meme, opposite of Tunneler (construction specialist and plants specialist)
 - For those with Biotech, adds Purifier meme, opposite of Bloodfeeding (medical specialist and melee specialist)
 -->

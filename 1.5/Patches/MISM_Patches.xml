@@ -68,12 +68,37 @@
         </value>
     </Operation>
 
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/MemeDef[defName="Raider"]/groupDef</xpath>
+        <value><groupDef>MISM_Welcome</groupDef></value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/MemeDef[defName="Raider"]/exclusionTags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="Raider"]</xpath>
+            <value>
+                <exclusionTags>
+                    <li>MISM_Welcome</li>
+                </exclusionTags>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="Raider"]/exclusionTags</xpath>
+            <value>
+                <li>MISM_Welcome</li>
+            </value>
+        </match>
+    </Operation>
+
+
     <!--Specialists-->
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/PreceptDef[defName="IdeoRole_MedicalSpecialist"]/requiredMemes</xpath>
         <value>
             <li>MISM_BarrenConnection</li>
             <li>MISM_SterileLife</li>
+            <li>MISM_Hospitality</li>
         </value>
     </Operation>
 
@@ -82,6 +107,13 @@
         <value>
             <li>MISM_BarrenConnection</li>
             <li>MISM_Farmer</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PreceptDef[defName="IdeoRole_AnimalsSpecialist"]/requiredMemes</xpath>
+        <value>
+            <li>MISM_Hospitality</li>
         </value>
     </Operation>
 
