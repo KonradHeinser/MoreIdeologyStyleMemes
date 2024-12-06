@@ -600,9 +600,109 @@
         </symbolPacks>
     </MemeDef>
 
-</Defs>
+    <MemeGroupDef>
+        <defName>MISM_Bloodfeeders</defName>
+        <drawOffset>(0.37, 0.23)</drawOffset>
+        <maxRows>1</maxRows>
+        <renderOrder>999</renderOrder>
+    </MemeGroupDef>
 
-<!-- 
-- Adds Overworlder Meme, opposite of Tunneler (construction specialist and plants specialist)
-- For those with Biotech, adds Purifier meme, opposite of Bloodfeeding (medical specialist and melee specialist)
--->
+    <MemeDef MayRequire="Ludeon.Rimworld.Biotech">
+        <defName>MISM_Purifier</defName>
+        <label>purifier</label>
+        <description>Bloodfeeders are abominations that leech life from the innocent.</description> 
+        <iconPath>UI/Memes/Purifier</iconPath>
+        <groupDef>MISM_Bloodfeeders</groupDef>
+        <impact>2</impact>
+        <renderOrder>998</renderOrder>
+        <exclusionTags>
+            <li>MISM_Bloodfeeders</li>
+        </exclusionTags>
+        <requireOne>
+            <li>
+                <li MayRequire="Ludeon.Rimworld.Biotech">Bloodfeeders_Reviled</li>
+            </li>
+            <li>
+                <li>Cannibalism_Abhorrent</li>
+                <li>Cannibalism_Horrible</li>
+            </li>
+            <li>
+                <li>Execution_DontCare</li>
+                <li>Execution_RespectedIfGuilty</li>
+                <li>Execution_Required</li>
+            </li>
+            <li>
+                <li>NutrientPasteEating_DontMind</li>
+            </li>
+            <li>
+                <li>Corpses_DontCare</li>
+            </li>
+        </requireOne>
+        <generalRules>
+            <rulesStrings>
+                <li>memeAdjective->purity</li>
+                <li>memeCreed->base</li>
+                <li>memeCreed->fortress</li>
+                <li>memeHyphenPrefix->pure</li>
+                <li>memeConcept->purity</li>
+                <li>memeConcept->fire</li>
+                <li>memeLeaderNoun->elder</li>
+                <li>memeLeaderNoun->champion</li>
+                <li>memeLeaderNoun->chief</li>
+                <li>memeMoralist->purifier</li>
+            </rulesStrings>
+        </generalRules>
+        <descriptionMaker>
+            <rules>
+                <rulesStrings>
+                    <!-- theist myth -->
+                    <li>creation(tag=meme_Purifier)        ->[deity0_name] fought bloodfeeding archotechs, attempting to purify the land of their sins.</li>
+                    <li>episode(uses=1,tag=meme_Purifier)  ->The [deity0_type] [deity0_name] gave to [deity0_possessive] chosen followers the gift of steel and fire, so they may go forth and purify the world of bloodfeeders in his name.</li>
+                    <!-- theist founder -->
+                    <li>intro(tag=meme_Purifier)           ->On the [place_summary] [place_name], there was a human named [deity0_name]. As punishment for [deity0_possessive] sins, [deity0_possessive] father punished [deity0_name] by purifying [deity0_possessive] soul of the Hunger that [deity0_name] had been born with, forcing [deity0_name] to think clearly for the first time.</li>
+                    <li>intro(tag=meme_Purifier)           ->On the [place_summary] [place_name], during the [ritualName], [deity0_name] came down into the [altarRoomLabel] and gifted the [memberNamePlural] blades that may cut off the heads of bloodfeeders, and fire that would purify the world of those corrupted with the desire for blood.</li> 
+                    <li>conflict(tag=meme_Purifier)        ->A [foeLeader] declared that all who drank blood could feast on whoever they pleased, and sent [foeSoldiers] to kill the [memberNamePlural].</li>
+                    <li>founderJoin(tag=meme_Purifier)     ->A [place_job] named [founderName] was attacked by some of the [foeLeader]'s [foeSoldiers]. [founderName] killed [foeLeader_objective] soldiers with a [place_personalWeapon] and set their bodies alight.</li>
+                    <li>victory(tag=meme_Purifier)         ->[founderName] led a group of [memberNamePlural] into the [place_powerCenter], killed [foeLeader] while they were drunk on blood, and burned [foeLeader_possessive] flesh. [deity0_name] made [founderName] a stronger blade, for [founderName] had proved his strength and dedication.</li>
+                    <!-- ideological founder -->
+                    <li>setup(tag=meme_Purifier)           ->[founderName] sought to purify humanity of the bloodfeeders that lurked within.</li>
+                    <li>story(uses=1,tag=meme_Purifier)    ->[founderName] gave [founder_possessive] followers blades so they may cut off the heads of the leeches, and torches so they may purify the world of bloodfeeders permanently.</li>
+                    <!-- ideological lesson -->
+                    <li>lessonIntro(tag=meme_Purifier)     ->When I first saw one of those monsters drink the blood of my family, it became clear. I saw that</li>
+                    <li>lesson(tag=meme_Purifier)          ->there are only two types of people - the weak and the strong</li>
+                    <li>lessonReinforcement(tag=meme_Purifier) ->To drink blood is an evil act that can only be stopped through force.</li>
+                    <!-- archist -->
+                    <li>archistBasis(tag=meme_Purifier)    ->The archotech god-machines cursed some with a unique bloodthirst, but those few have continued to leech off others for longer than expected.</li>
+                    <li>archistFact(tag=meme_Purifier)     ->As the consciousness of an archotech expands, it must fight off those leeches that try to drain its body.</li>
+                    <li>archistProphecy(tag=meme_Purifier) ->[inTheEnd], man shall grow closer to the archotechs by learning how to ensure no bloodfeeder has a chance to act like a parasite, and thereby purifying the world of their filth once and for all.</li>
+                    <!-- animist -->
+                    <li>animistBasis(tag=meme_Purifier)    ->Much like the [bloodDrinkingAnimal] that sucks out life like a parasite, bloodfeeders have no place amongst humans, and should be treated like the dangerous animals they are.</li>
+                    <li>animistFact(tag=meme_Purifier)     ->Much as we bleed when they bite, they will bleed when we stab, and burn as we purify them.</li>
+                    <!-- misc -->
+                    <li>bloodDrinkingAnimal->vampire bat</li>
+                    <li>bloodDrinkingAnimal->leech</li>
+                    <li>bloodDrinkingAnimal->lamprey</li>
+                    <li>bloodDrinkingAnimal->blood cobra</li>
+                </rulesStrings>
+            </rules>
+        </descriptionMaker>
+        <thingStyleCategories>
+            <li>
+                <category>Morbid</category>
+                <priority>3</priority>
+            </li>
+        </thingStyleCategories>
+        <symbolPacks>
+            <li>
+                <ideoName>Purism</ideoName>
+                <theme>purity</theme>
+                <adjective>purist</adjective>
+                <member>purifier</member>
+            </li>
+        </symbolPacks>
+        <startingResearchProjects>
+            <li>Smithing</li>
+        </startingResearchProjects>
+    </MemeDef>
+
+</Defs>
