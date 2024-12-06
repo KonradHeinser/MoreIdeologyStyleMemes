@@ -62,6 +62,11 @@
     </Operation>
 
     <Operation Class="PatchOperationAdd">
+        <xpath>Defs/MemeDef[defName="HighLife"]/exclusionTags</xpath>
+        <value><li>MISM_DrugLife</li></value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
         <xpath>Defs/PreceptDef[defName="DrugUse_MedicalOnly"]/associatedMemes</xpath>
         <value>
             <li>MISM_SterileLife</li>
@@ -92,56 +97,58 @@
     </Operation>
 
     <Operation Class="PatchOperationConditional">
-        <xpath>Defs/MemeDef[defName="Bloodfeeder"]</xpath>
+        <xpath>Defs/MemeDef[defName="Bloodfeeding"]</xpath>
         <match Class="PatchOperationSequence">
-            <li Class="PatchOperationReplace">
-                <xpath>Defs/MemeDef[defName="Bloodfeeder"]/groupDef</xpath>
-                <value><groupDef>MISM_Bloodfeeders</groupDef></value>
-            </li>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/MemeDef[defName="Bloodfeeding"]/groupDef</xpath>
+                    <value><groupDef>MISM_Bloodfeeders</groupDef></value>
+                </li>
 
-            <li Class="PatchOperationConditional">
-                <xpath>Defs/MemeDef[defName="Bloodfeeder"]/exclusionTags</xpath>
-                <nomatch Class="PatchOperationAdd">
-                    <xpath>Defs/MemeDef[defName="Bloodfeeder"]</xpath>
-                    <value>
-                        <exclusionTags>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/MemeDef[defName="Bloodfeeding"]/exclusionTags</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="Bloodfeeding"]</xpath>
+                        <value>
+                            <exclusionTags>
+                                <li>MISM_Bloodfeeders</li>
+                            </exclusionTags>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="Bloodfeeding"]/exclusionTags</xpath>
+                        <value>
                             <li>MISM_Bloodfeeders</li>
-                        </exclusionTags>
-                    </value>
-                </nomatch>
-                <match Class="PatchOperationAdd">
-                    <xpath>Defs/MemeDef[defName="Bloodfeeder"]/exclusionTags</xpath>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PreceptDef[defName="NutrientPasteEating_DontMind"]/associatedMemes</xpath>
                     <value>
-                        <li>MISM_Bloodfeeders</li>
+                        <li>MISM_Purifier</li>
                     </value>
-                </match>
-            </li>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PreceptDef[defName="NutrientPasteEating_DontMind"]/requiredMemes</xpath>
+                    <value>
+                        <li>MISM_Purifier</li>
+                    </value>
+                </li>
 
-            <li Class="PatchOperationAdd">
-                <xpath>Defs/PreceptDef[defName="NutrientPasteEating_DontMind"]/associatedMemes</xpath>
-                <value>
-                    <li>MISM_Purifier</li>
-                </value>
-            </li>
-            <li Class="PatchOperationAdd">
-                <xpath>Defs/PreceptDef[defName="NutrientPasteEating_DontMind"]/requiredMemes</xpath>
-                <value>
-                    <li>MISM_Purifier</li>
-                </value>
-            </li>
-
-            <li Class="PatchOperationAdd">
-                <xpath>Defs/PreceptDef[defName="Corpses_DontCare"]/associatedMemes</xpath>
-                <value>
-                    <li>MISM_Purifier</li>
-                </value>
-            </li>
-            <li Class="PatchOperationAdd">
-                <xpath>Defs/PreceptDef[defName="Corpses_DontCare"]/requiredMemes</xpath>
-                <value>
-                    <li>MISM_Purifier</li>
-                </value>
-            </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PreceptDef[defName="Corpses_DontCare"]/associatedMemes</xpath>
+                    <value>
+                        <li>MISM_Purifier</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PreceptDef[defName="Corpses_DontCare"]/requiredMemes</xpath>
+                    <value>
+                        <li>MISM_Purifier</li>
+                    </value>
+                </li>
+            </operations>
         </match>
     </Operation>
 
@@ -149,7 +156,7 @@
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/PreceptDef[defName="IdeoRole_MeleeSpecialist"]/requiredMemes</xpath>
         <value>
-            <li>MISM_Purifier</li>
+            <li MayRequire="Ludeon.Rimworld.Biotech">MISM_Purifier</li>
         </value>
     </Operation>
 
@@ -159,7 +166,6 @@
             <li>MISM_BarrenConnection</li>
             <li>MISM_SterileLife</li>
             <li>MISM_Hospitality</li>
-            <li>MISM_Purifier</li>
         </value>
     </Operation>
 

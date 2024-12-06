@@ -275,7 +275,7 @@
         <defName>MISM_Mechanist</defName>
         <label>mechanist</label>
         <description>Without machines we will be lost.</description>
-        <iconPath>UI/Memes/Mechanist</iconPath>
+        <iconPath>MISM_Mechanist</iconPath>
         <groupDef>Primacy</groupDef>
         <impact>2</impact>
         <renderOrder>50</renderOrder>
@@ -422,7 +422,7 @@
     <MemeDef>
         <defName>MISM_SterileLife</defName>
         <label>sterile life</label>
-        <description>We must not allow ourselves to succumb to the poisons of recreational drugs, and instead focus our minds in other areas. Any who do cloud their minds with substances should have the supply cut off so they have a chance to become productive members of society once more.</description>
+        <description>We must not allow ourselves to succumb to the poisons of recreational drugs.</description>
         <iconPath>MISM_SterileLife</iconPath>
         <groupDef>MISM_DrugLife</groupDef>
         <impact>2</impact>
@@ -431,7 +431,7 @@
             <li>MISM_Burnizer</li>
         </consumableBuildings>
         <exclusionTags>
-            <li>DrugUse</li>
+            <li>MISM_DrugLife</li>
         </exclusionTags>
         <requireOne>
             <li>
@@ -519,7 +519,7 @@
     <MemeDef>
         <defName>MISM_Hospitality</defName>
         <label>hospitality</label>
-        <description>We must do what we can to ensure those who visit our colony, do not feel unwelcome. Those who arrive with destruction in their minds should be given the chance to leave peacefully should they survive the initial conflict, assuming they do not wish to join us.</description>
+        <description>We must do what we can to ensure those who visit our colony, do not feel unwelcome.</description>
         <iconPath>MISM_Hospitality</iconPath>
         <groupDef>MISM_Welcome</groupDef>
         <impact>2</impact>
@@ -611,7 +611,7 @@
         <defName>MISM_Purifier</defName>
         <label>purifier</label>
         <description>Bloodfeeders are abominations that leech life from the innocent.</description> 
-        <iconPath>UI/Memes/Purifier</iconPath>
+        <iconPath>MISM_Purifier</iconPath>
         <groupDef>MISM_Bloodfeeders</groupDef>
         <impact>2</impact>
         <renderOrder>998</renderOrder>
