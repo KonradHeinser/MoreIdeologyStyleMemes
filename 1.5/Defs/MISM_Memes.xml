@@ -544,15 +544,15 @@
             </li>
         </requireOne>
         <generalRules>
-        <rulesStrings>
-            <li>memeAdjective->helping</li>
-            <li>memeHyphenPrefix->provide</li>
-            <li>memeConcept->helping</li>
-            <li>memeConcept->providing</li>
-            <li>memeLeaderNoun->provider</li>
-            <li>memeLeaderNoun->helper</li>
-            <li>memeMoralist->guider</li>
-        </rulesStrings>
+            <rulesStrings>
+                <li>memeAdjective->helping</li>
+                <li>memeHyphenPrefix->provide</li>
+                <li>memeConcept->helping</li>
+                <li>memeConcept->providing</li>
+                <li>memeLeaderNoun->provider</li>
+                <li>memeLeaderNoun->helper</li>
+                <li>memeMoralist->guider</li>
+            </rulesStrings>
         </generalRules>
         <descriptionMaker>
         <rules>
