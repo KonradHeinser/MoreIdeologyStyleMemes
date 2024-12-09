@@ -192,7 +192,7 @@
         <impact>Medium</impact>
         <displayOrderInImpact>1000</displayOrderInImpact>
         <requiredMemes>
-          <li>Rancher</li>
+          <li>MISM_Farmer</li>
         </requiredMemes>
         <comps>
           <li Class="PreceptComp_SituationalThought">
