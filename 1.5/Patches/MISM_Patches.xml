@@ -126,26 +126,26 @@
                 <li Class="PatchOperationAdd">
                     <xpath>Defs/PreceptDef[defName="NutrientPasteEating_DontMind"]/associatedMemes</xpath>
                     <value>
-                        <li>MISM_Purifier</li>
+                        <li>MISM_Purifying</li>
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
                     <xpath>Defs/PreceptDef[defName="NutrientPasteEating_DontMind"]/requiredMemes</xpath>
                     <value>
-                        <li>MISM_Purifier</li>
+                        <li>MISM_Purifying</li>
                     </value>
                 </li>
 
                 <li Class="PatchOperationAdd">
                     <xpath>Defs/PreceptDef[defName="Corpses_DontCare"]/associatedMemes</xpath>
                     <value>
-                        <li>MISM_Purifier</li>
+                        <li>MISM_Purifying</li>
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
                     <xpath>Defs/PreceptDef[defName="Corpses_DontCare"]/requiredMemes</xpath>
                     <value>
-                        <li>MISM_Purifier</li>
+                        <li>MISM_Purifying</li>
                     </value>
                 </li>
             </operations>
@@ -156,7 +156,7 @@
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/PreceptDef[defName="IdeoRole_MeleeSpecialist"]/requiredMemes</xpath>
         <value>
-            <li MayRequire="Ludeon.Rimworld.Biotech">MISM_Purifier</li>
+            <li MayRequire="Ludeon.Rimworld.Biotech">MISM_Purifying</li>
         </value>
     </Operation>
 
