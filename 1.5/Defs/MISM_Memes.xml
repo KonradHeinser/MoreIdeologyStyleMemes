@@ -608,10 +608,10 @@
     </MemeGroupDef>
 
     <MemeDef MayRequire="Ludeon.Rimworld.Biotech">
-        <defName>MISM_Purifier</defName>
-        <label>purifier</label>
+        <defName>MISM_Purifying</defName>
+        <label>purifying</label>
         <description>Bloodfeeders are abominations that leech life from the innocent.</description> 
-        <iconPath>MISM_Purifier</iconPath>
+        <iconPath>MISM_Purifying</iconPath>
         <groupDef>MISM_Bloodfeeders</groupDef>
         <impact>2</impact>
         <renderOrder>998</renderOrder>
