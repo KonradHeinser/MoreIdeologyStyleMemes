@@ -183,7 +183,7 @@
     <MemeDef>
         <defName>MISM_Farmer</defName>
         <label>farmer</label>
-        <description>Raising fields is the right way; raising animals to eat is not.</description>
+        <description>Growing fields is the right way; raising animals to eat is not.</description>
         <iconPath>MISM_Farmer</iconPath>
         <groupDef>MISM_Farmer</groupDef>
         <impact>2</impact>
