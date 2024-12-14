@@ -271,7 +271,6 @@
 	<ThoughtDef>
         <defName>MISM_FarmingSowedPlant</defName>
         <durationDays>2</durationDays>
-        <minExpectation>Low</minExpectation>
         <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
         <stages>
           <li>
