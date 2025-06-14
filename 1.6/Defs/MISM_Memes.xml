@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <MemeGroupDef>
+        <defName>MISM_FleshAugmentation</defName>
+        <drawOffset>(0.37, 0.23)</drawOffset>
+        <maxRows>1</maxRows>
+        <renderOrder>0</renderOrder>
+    </MemeGroupDef>
+    
+    <MemeGroupDef>
+        <defName>MISM_Proselythism</defName>
+        <drawOffset>(0.37, 0.23)</drawOffset>
+        <maxRows>1</maxRows>
+        <renderOrder>1900</renderOrder>
+    </MemeGroupDef>
+
+    <MemeDef>
+        <defName>MISM_Follower</defName>
+        <label>follower</label>
+        <description>Belief is not for another to decide upon, but for one to naturally seek.</description>
+        <iconPath>MISM_Follower</iconPath>
+        <groupDef>MISM_Proselythism</groupDef>
+        <impact>2</impact>
+        <renderOrder>80</renderOrder>
+        <generalRules>
+            <rulesStrings>
+                <li>memeAdjective->true</li>
+                <li>memeAdjective->real</li>
+                <li>memeHyphenPrefix->truth</li>
+                <li>memeConcept->truth</li>
+                <li>memeLeaderNoun->worshiper</li>
+                <li>memeMoralist->follower</li>
+                <li>memeMoralist->believer</li>
+            </rulesStrings>
+        </generalRules>
+        <descriptionMaker>
+            <rules>
+                <rulesStrings>
+                    <!-- theist myth -->
+                    <li>creation(tag=meme_Follower)        ->[deity0_name] anointed a few among mortals to hear [deity0_possessive] word.</li>
+                    <li>episode(uses=1,tag=meme_Follower)  ->[deity0_name] said to all the [memberNamePlural], "Go forth and remember my word so it may guide you to righteousness."</li>
+                    <!-- theist founder -->
+                    <li>intro(tag=meme_Follower)           ->[memberNamePlural] built a great [altarName] on the [place_summary] [place_name], so that believers could come to hear [deity0_name]'s divine word.</li>
+                    <li>conflict(tag=meme_Follower)        ->A spiteful [foeLeader], seeking to deny the word of [deity0_name], told [foeLeader_possessive] [foeSoldiers] to cut out the eyes of any who worship the [deity0_type].</li>
+                    <li>founderJoin(tag=meme_Follower)     ->[deity0_name] blessed a [place_job] named [founderName] with great wisdom, and none could turn away when [founder_pronoun] spoke.</li>
+                    <li>victory(tag=meme_Follower)         ->[founderName] admonished the [foeSoldiers], reminding them that belief through force only creates evil, and they put down their [place_personalWeapon]s.</li>
+                    <!-- ideological founder -->
+                    <li>setup(tag=meme_Follower)           ->Our founder [founderName] traveled between the cities seeking truth, and found it within themselves.</li>
+                    <li>story(uses=1,tag=meme_Follower)    ->The believers moved between cities and institutions, seeking the wisdom of the new righteousness.</li>
+                    <!-- ideological lesson -->
+                    <li>lessonIntro(tag=meme_Follower)         ->In all my years spreading our truth, I learned one lesson that stands over all:</li>
+                    <li>lesson(tag=meme_Follower)              ->forcing our beliefs on others would be a crime</li>
+                    <li>lessonReinforcement(tag=meme_Follower) ->If one does not come to believe of their own will, their belief will always be tainted!</li>
+                    <!-- archist -->
+                    <li>archistBasis(tag=meme_Follower)    ->The archotechs announce their presence from the sky, and in the mind, to gather those who wish to believe.</li>
+                    <li>archistFact(tag=meme_Follower)     ->Archotechs touch those who believe, and guide them to the truth of the world.</li>
+                    <li>archistProphecy(tag=meme_Follower) ->[inTheEnd], the archotechs will voice their final wisdom to the holder of the [relic0_name], who must always accept those who come to learn, to see, to observe.</li>
+                    <!-- animist -->
+                    <li>animistFact(tag=meme_Follower)     ->The spirits want to be known, but only speak to a few. They want us to bring this knowledge inward, to truly understand why we must believe this way, and to realize others much reach the same point through their own wisdom.</li>
+                </rulesStrings>
+            </rules>
+        </descriptionMaker>
+        <requireOne>
+          <li>
+            <li>Proselytizing_Never</li>
+            <li>Proselytizing_Rare</li>
+          </li>
+        </requireOne>
+        <symbolPacks>
+            <li>
+                <ideoName>Truthism</ideoName>
+                <theme>truth</theme>
+                <adjective>truthist</adjective>
+                <member>truthist</member>
+            </li>
+            <li>
+                <ideoName>Verity</ideoName>
+                <theme>verity</theme>
+                <adjective>veritic</adjective>
+                <member>veritist</member>
+            </li>
+            <li>
+                <ideoName>Reality</ideoName>
+                <theme>reality</theme>
+                <adjective>realitic</adjective>
+                <member>realitist</member>
+            </li>
+        </symbolPacks>
+    </MemeDef>
+
+    <MemeGroupDef>
+        <defName>MISM_TreeThought</defName>
+        <drawOffset>(0.37, 0.23)</drawOffset>
+        <maxRows>1</maxRows>
+        <renderOrder>1000</renderOrder>
+    </MemeGroupDef>
+
+    <MemeDef>
+        <defName>MISM_BarrenConnection</defName>
+        <label>barren connection</label>
+        <description>Forests are nests of pests and disease, and should be purged from this world.</description>
+        <iconPath>MISM_BarrenConnection</iconPath>
+        <groupDef>MISM_TreeThought</groupDef>
+        <impact>3</impact>
+        <renderOrder>120</renderOrder>
+        <exclusionTags>
+            <li>MISM_TreeConnection</li>
+        </exclusionTags>
+        <requireOne>
+            <li>
+                <li>MISM_Trees_Hated</li>
+            </li>
+            <li>
+                <li>RoughLiving_Welcomed</li>
+            </li>
+            <li>
+                <li>Temperature_Tough</li>
+            </li>
+        </requireOne>
+        <generalRules>
+            <rulesStrings>
+                <li>memeCreed->axe</li>
+                <li>memeCreed->land</li>
+                <li>memeCreed->field</li>
+                <li>memeCreed->barren</li>
+                <li>memeConcept->lands</li>
+                <li>memeConcept->fields</li>
+                <li>memeAdjective->healthy</li>
+                <li>memeAdjective->pure</li>
+                <li>memeHyphenPrefix->field</li>
+                <li>memeHyphenPrefix->land</li>
+                <li>memeLeaderNoun->deforester</li>
+                <li>memeLeaderNoun->uprooter</li>
+                <li>memeLeaderNoun->antidruid</li>
+                <li>memeLeaderAdjective->green</li>
+                <li>memeLeaderAdjective->land</li>
+                <li>memeLeaderAdjective->field</li>
+                <li>memeMoralist->treesbreaker</li>
+            </rulesStrings>
+        </generalRules>
+        <descriptionMaker>
+            <rules>
+                <rulesStrings>
+                    <!-- theist myth -->
+                    <li>creation(tag=meme_TreeHatred)        ->[deity0_name] uprooted the trees from the ground, flinging them high towards heaven. This is [deity0_name]'s first lesson on how to know [deity0_objective].</li>
+                    <li>episode(uses=1,tag=meme_TreeHatred)  ->[deity0_name]'s wildfires renew the air that [deity0_possessive] people breathe, and protect them from the pestilence trees promise.</li>
+                    <!-- theist founder -->
+                    <li>intro(tag=meme_TreeHatred)           ->When the original deforesters first came to the [place_summary] [place_name], they created a sacred field where they could worship the [deity0_type] [deity0_name].</li>
+                    <li>conflict(tag=meme_TreeHatred)        ->A greedy [foeLeader] spat in the face of [deity0_name] by planting many forests for [foeLeader_possessive] farms.</li>
+                    <li>founderJoin(tag=meme_TreeHatred)     ->The prophet [founderName] was miraculously born from the ashes of a tree in [place_name], and discovered by [founder_possessive] parents in the sacred field.</li>
+                    <li>victory(tag=meme_TreeHatred)         ->[founderName] found the [foeLeader] sleeping in the [place_powerCenter], and drove an acorn into the [foeLeader]'s eye. With [deity0_name]'s fierce power it ignited there, purifying [foeLeader_possessive] body, taking our revenge on the tree-hugger.</li>
+                    <!-- ideological founder -->
+                    <li>setup(tag=meme_TreeHatred)           ->In a world lacking depth and meaning, [founderName] meditated in the ashes of a forest, connecting with the peaceful nature around, and founded our movement.</li>
+                    <li>story(uses=1,tag=meme_TreeHatred)    ->[founderName] brought the tired to the field so that they might rest in its pure land, and breathe in its air, and be renewed.</li>
+                    <!-- ideological lesson -->
+                    <li>lessonIntro(tag=meme_TreeHatred)         ->It might seem to you like a joke to say that I learnt this while sitting under a tree. But listening to its whispering leaves, I knew that</li>
+                    <li>lesson(tag=meme_TreeHatred)              ->the filth, insects, and pests that gather within its fields are a danger</li>
+                    <li>lessonReinforcement(tag=meme_TreeHatred) ->We must purge this danger from any land we live on so our children may prosper with health and peace of mind.</li>
+                    <!-- archist -->
+                    <li>archistBasis(tag=meme_TreeHatred)    ->Trees symbolize the enemy of the archotechs. Like an ancient oak they dwarf the small acorn from which they grew, and their influence spreads through unseen roots beneath the surface.</li>
+                    <li>archistFact(tag=meme_TreeHatred)     ->The archotechs sought to purify worlds of the filth and pestilence that comes with trees.</li>
+                    <li>archistFact(tag=meme_TreeHatred)     ->The archotechs choose to express themselves through wildfires that devastated many forests.</li>
+                    <li>archistProphecy(tag=meme_TreeHatred) ->[inTheEnd], the archotechs will burn all forests. Transcendence will grown within those that harvest the ashes of this fire. Those that embrace trees will be forgotten by the archotechs.</li>
+                    <!-- animist -->
+                    <li>animistFact(tag=meme_TreeHatred)     ->The spirits that protect us are often disrupted by the presence of trees.</li>
+                    <li>animistFact(tag=meme_TreeHatred)     ->The evil spirits of trees are powerful, as they spread pestilence on the people who seek to thrive nearby.</li>
+                    <li>animistFact(tag=meme_TreeHatred)     ->If a tree falls in the forest, the spirits will celebrate the destruction.</li>
+                </rulesStrings>
+            </rules>
+        </descriptionMaker>
+        <startingResearchProjects>
+            <li>Devilstrand</li>
+        </startingResearchProjects>
+    </MemeDef>
+    
+    <MemeGroupDef>
+        <defName>MISM_Farmer</defName>
+        <drawOffset>(0.37, 0.23)</drawOffset>
+        <maxRows>1</maxRows>
+        <renderOrder>1000</renderOrder>
+    </MemeGroupDef>
+
+    <MemeDef>
+        <defName>MISM_Farmer</defName>
+        <label>farmer</label>
+        <description>Growing fields is the right way; raising animals to eat is not.</description>
+        <iconPath>MISM_Farmer</iconPath>
+        <groupDef>MISM_Farmer</groupDef>
+        <impact>2</impact>
+        <renderOrder>80</renderOrder>
+        <exclusionTags>
+            <li>MISM_FarmType</li>
+        </exclusionTags>
+        <consumableBuildings>
+            <li>Pyre</li>
+        </consumableBuildings>
+        <requireOne>
+            <li>
+                <li>MISM_FarmingCentral</li>
+            </li>
+        </requireOne>
+        <generalRules>
+            <rulesStrings>
+                <li>memeAdjective->farm</li>
+                <li>memeAdjective->rural</li>
+                <li>memeAdjective->country</li>
+                <li>memeHyphenPrefix->farm</li>
+                <li>memeConcept->farming</li>
+                <li>memeLeaderNoun->farmer</li>
+                <li>memeLeaderNoun->hand</li>
+                <li>memeLeaderNoun->harvester</li>
+            </rulesStrings>
+        </generalRules>
+        <descriptionMaker>
+            <rules>
+                <rulesStrings>
+                    <!-- theist myth -->
+                    <li>creation(tag=meme_Farmer)        ->[deity0_name] created the fields, and then man, and gave the fields to man to cherish and grow and reap as acts of veneration towards [deity0_objective].</li>
+                    <li>episode(uses=1,tag=meme_Farmer)  ->[deity0_name] created all the noble fields and crops of the land, and said, "Take these noble crops, and through them make yourselves fruitful in my honor."</li>
+                    <!-- theist founder -->
+                    <li>intro(tag=meme_Farmer)           ->The early farmers of the [place_summary] [place_name] built a great [altarName] to [deity0_name].</li>
+                    <li>conflict(tag=meme_Farmer)        ->A powerful [foeLeader] despised the [memberNamePlural] and their ways, and bought up all the grasslands to grow [Vegetable]s.</li>
+                    <li>founderJoin(tag=meme_Farmer)     ->[memberName]'s savior [founderName] was born on a spring morning in a humble field, amidst crops, and [founder_possessive] parents were farmers.</li>
+                    <li>victory(tag=meme_Farmer)         ->[founderName] walked to the [place_community], and challenged the [foeLeader] to a duel with [place_personalWeapon]s at noon. The [foeLeader] could not refuse or else lose the trust of the [foeSoldiers]. [founderName] killed the [foeLeader].</li>
+                    <!-- ideological founder -->
+                    <li>setup(tag=meme_Farmer)           ->The farmers were persecuted, so they escaped to the countryside where they could build a good farming society.</li>
+                    <li>story(uses=1,tag=meme_Farmer)    ->The believers spread out onto the land, and grew in number as they lived on their idyllic farms.</li>
+                    <!-- ideological lesson -->
+                    <li>lessonIntro(tag=meme_Farmer)         ->Out in the fields, we had a saying among the old hands:</li>
+                    <li>lesson(tag=meme_Farmer)              ->good and happiness right livin' is found among the crops</li>
+                    <li>lessonReinforcement(tag=meme_Farmer) ->It's something you come to accept in the lonely fields, listenin' to the crops whisperin' while you sit around the fire.</li>
+                    <!-- archist -->
+                    <li>archistFact(tag=meme_Farmer)     ->The archotechs care for humanity like fields, for we are their most precious lands.</li>
+                    <li>archistProphecy(tag=meme_Farmer) ->[inTheEnd], the archotechs will depart, and drive before them those who tended their own fields well. The rest will be left behind in the wilderness.</li>
+                    <!-- animist -->
+                    <li>animistFact(tag=meme_Farmer)     ->Nature's fields are the spirits of slaves, and demand to be taken into service.</li>
+                </rulesStrings>
+            </rules>
+        </descriptionMaker>
+        <symbolPacks>
+            <li>
+                <ideoName>Farmism</ideoName>
+                <theme>farming</theme>
+                <adjective>farm</adjective>
+                <member>farmer</member>
+            </li>
+        </symbolPacks>
+        <styleItemTags>
+            <li>
+                <tag>NoBeard</tag>
+                <weightFactor>0.5</weightFactor>
+            </li>
+            <li>
+                <tag>BeardUrban</tag>
+                <weightFactor>0.8</weightFactor>
+            </li>
+            <li>
+                <tag>BeardPunk</tag>
+                <weightFactor>0.5</weightFactor>
+            </li>
+            <li>
+                <tag>BeardRural</tag>
+                <baseWeight>1</baseWeight>
+                <weightFactor>2</weightFactor>
+            </li>
+            <li>
+                <tag>BeardTribal</tag>
+                <baseWeight>0.5</baseWeight>
+                <weightFactor>1</weightFactor>
+            </li>
+        </styleItemTags>
+    </MemeDef>
+
+    <MemeDef>
+        <defName>MISM_Mechanist</defName>
+        <label>mechanist</label>
+        <description>Without machines we will be lost.</description>
+        <iconPath>MISM_Mechanist</iconPath>
+        <groupDef>Primacy</groupDef>
+        <impact>2</impact>
+        <renderOrder>50</renderOrder>
+        <veneratedAnimalsCountOverride>0</veneratedAnimalsCountOverride>    
+        <exclusionTags>
+            <li>Primacy</li>
+        </exclusionTags>
+        <generalRules>
+            <rulesStrings>
+                <li>memeAdjective->technological</li>
+                <li>memeAdjective->mechane</li>
+                <li>memeAdjective->industrial</li>
+                <li>memeCreed->school</li>
+                <li>memeCreed->academy</li>
+                <li>memeCreed->university</li>
+                <li>memeCreed->philosophy</li>
+                <li>memeHyphenPrefix->techno</li>
+                <li>memeHyphenPrefix->cyber</li>
+                <li>memeHyphenPrefix->haxor</li>
+                <li>memeHyphenPrefix->wire</li>
+                <li>memeConcept->technology</li>
+                <li>memeConcept->silicon</li>
+                <li>memeConcept->artifice</li>
+                <li>memeConcept->mechanoid</li>
+                <li>memeConcept->mechanical</li>
+                <li>memeLeaderNoun->haxor</li>
+                <li>memeLeaderNoun->superuser</li>
+                <li>memeLeaderNoun->booster</li>
+                <li>memeLeaderAdjective->techno</li>
+                <li>memeLeaderAdjective->cyber</li>
+                <li>memeMoralist->installer</li>
+                <li>memeMoralist->fixer</li>
+                <li>memeMoralist->mechanist</li>
+                <li>memeMoralist->technologist</li>
+            </rulesStrings>
+        </generalRules>
+        <descriptionMaker>
+          <rules>
+            <rulesStrings>
+              <!-- theist myth -->
+              <li>creation(tag=meme_Mechanist)        ->[deity0_name] granted us the knowledge of technology, that we may use it to improve and remake our land in [deity0_possessive] home.</li>
+              <li>episode(uses=1,tag=meme_Mechanist)  ->Human mechanists studied the works of [deity0_name], which pleased [deity0_objective].</li>
+              <!-- theist founder -->
+              <li>intro(tag=meme_Mechanist)           ->On the [place_summary] [place_name], the [memberNamePlural] found the words of [deity0_name] whispering to them through their mechanes.</li>
+              <li>conflict(tag=meme_Mechanist)        ->A luddite [foeLeader] envied the enhanced progress of the [memberNamePlural], and [foeLeader_possessive] [foeSoldiers] destroyed their workshops with [place_personalWeapon]s.</li>
+              <li>founderJoin(tag=meme_Mechanist)     ->A cunning [place_job] named [founderName] fashioned a sensor machine to warn the [memberNamePlural] of the approach of the [foeSoldiers].</li>
+              <li>victory(tag=meme_Mechanist)         ->[founderName] received divine technological knowledge from [deity0_name], and used it to enhance the bodies and minds of the [memberNamePlural] so they could defeat the [foeSoldiers].</li>
+              <!-- ideological founder -->
+              <li>setup(tag=meme_Mechanist)           ->[founderName] was a mecha-scientist in the early days of human planetary colonization. Seeing the bureaucratic restrictions of the common colonies, [founder_pronoun] took a small ship to found [founder_possessive] own movement.</li>
+              <li>story(uses=1,tag=meme_Mechanist)    ->[founderName] assembled a team of great scientists and inventors to re-define humanity.</li>
+              <!-- ideological lesson -->
+              <li>lessonIntro(tag=meme_Mechanist)         ->The oldest researcher in my division taught me the history of technology, from neolithic to archotech, but this was not his true lesson. He was really leading me to understand that</li>
+              <li>lesson(tag=meme_Mechanist)              ->humanity's heavenly future is not a thing of meat and bone, but of silicon and steel</li>
+              <li>lessonReinforcement(tag=meme_Mechanist) ->The steel of mechanoids and machines may guide us where fleshy beings fail.</li>
+              <!-- archist -->
+              <li>archistBasis(tag=meme_Mechanist)    ->Humanity's pursuit of technology gave birth to the all-powerful archotechs as the rightful next step in the development of consciousness.</li>
+              <li>archistFact(tag=meme_Mechanist)     ->Technology allows humans to alter the world around them like the archotechs.</li>
+              <li>archistProphecy(tag=meme_Mechanist) ->[inTheEnd], the archotechs will depart. Only those who have sufficiently embraced the machine will be allowed to go with them.</li>
+              <!-- animist -->
+              <li>animistBasis(tag=meme_Mechanist)    ->The spirit world drives every action in the universe, and it is only by learning and controlling the laws of the universe that we can utilizing it.</li>
+              <li>animistFact(tag=meme_Mechanist)     ->Like seeks like - build a device for a purpose and it will filled with a spirit of a like nature.</li>
+              <li>animistFact(tag=meme_Mechanist)     ->When technology is properly utilized, the spirits will seek to aid us as they become more powerful.</li>
+              <li>animistProphecy(tag=meme_Mechanist) ->[itIsSaid] that one day the wielder of the [relic0_name] will summon its spirit who will teach humanity the ultimate mechanical technology.</li>
+            </rulesStrings>
+          </rules>
+        </descriptionMaker>
+        <symbolPacks>
+            <li>
+                <ideoName>Technologism</ideoName>
+                <theme>technology</theme>
+                <adjective>technologistic</adjective>
+                <member>technologist</member>
+            </li>
+            <li>
+                <ideoName>Progressism</ideoName>
+                <theme>progress</theme>
+                <adjective>progressist</adjective>
+                <member>progressor</member>
+            </li>
+            <li>
+                <ideoName>Mechanism</ideoName>
+                <theme>mechanery</theme>
+                <adjective>mechanist</adjective>
+                <member>mechanist</member>
+            </li>
+            <li>
+                <ideoName>Steelism</ideoName>
+                <theme>steel</theme>
+                <adjective>steelist</adjective>
+                <member>steeler</member>
+            </li>
+            <li>
+                <ideoName>Automatism</ideoName>
+                <theme>automata</theme>
+                <adjective>automatist</adjective>
+                <member>automator</member>
+            </li>
+        </symbolPacks>
+        <selectOneOrNone>
+            <noneChance>0.8</noneChance>
+            <preceptThingPairs>
+                <li>
+                    <precept>ApparelDesired_Soft_Subordinate</precept>
+                    <thing>Apparel_Slicecap</thing>
+                </li>
+            </preceptThingPairs>
+        </selectOneOrNone>
+        <preferredWeaponClasses>
+            <noble>Ultratech</noble>
+            <despised>Neolithic</despised>
+        </preferredWeaponClasses>
+        <requireOne>
+            <li>
+                <li>NutrientPasteEating_DontMind</li>
+            </li>
+            <li>
+                <li>MISM_AutonomousWeapons_Approved</li>
+            </li>
+            <li MayRequire="Ludeon.Rimworld.Biotech">
+                <li>MechanoidLabor_Enhanced</li>
+            </li>
+        </requireOne>
+        <styleItemTags>
+            <li>
+                <tag>NoBeard</tag>
+                <weightFactor>2</weightFactor>
+            </li>
+        </styleItemTags>
+        <thingStyleCategories>
+            <li>
+                <category>Techist</category>
+                <priority>4</priority>
+            </li>
+        </thingStyleCategories>
+    </MemeDef>
+
+    <MemeGroupDef>
+        <defName>MISM_DrugLife</defName>
+        <drawOffset>(0.37, 0.23)</drawOffset>
+        <maxRows>1</maxRows>
+        <renderOrder>100</renderOrder>
+    </MemeGroupDef>
+
+    <MemeDef>
+        <defName>MISM_SterileLife</defName>
+        <label>sterile life</label>
+        <description>We must not allow ourselves to succumb to the poisons of recreational drugs.</description>
+        <iconPath>MISM_SterileLife</iconPath>
+        <groupDef>MISM_DrugLife</groupDef>
+        <impact>2</impact>
+        <renderOrder>999</renderOrder>
+        <consumableBuildings>
+            <li>MISM_Burnizer</li>
+        </consumableBuildings>
+        <exclusionTags>
+            <li>MISM_DrugLife</li>
+        </exclusionTags>
+        <requireOne>
+            <li>
+                <li>DrugUse_MedicalOnly</li>
+            </li>
+        </requireOne>
+        <generalRules>
+            <rulesStrings>
+                <li>memeCreed->surgery</li>
+                <li>memeAdjective->healthy</li>
+                <li>memeAdjective->sterile</li>
+                <li>memeConcept->medicine</li>
+                <li>memeConcept->health</li>
+                <li>memeHyphenPrefix->medicine</li>
+                <li>memeLeaderNoun->medic</li>
+                <li>memeLeaderNoun->doctor</li>
+                <li>memeLeaderNoun->surgeon</li>
+                <li>memeMoralist->rejuvenator</li>
+                <li>memeMoralist->healer</li>
+            </rulesStrings>
+        </generalRules>
+        <descriptionMaker>
+          <rules>
+            <rulesStrings>
+              <!-- theist myth -->
+              <li>creation(tag=meme_SterileLife)           ->From the chaos of the universe, and [deity0_name] was born to guide those at risk of losing themselves.</li>
+              <li>episode(uses=1,tag=meme_SterileLife)     ->The [deity0_type] [deity0_name] reveals [deity0_possessive] truths to all, but those who cloud their minds may never find it.</li>
+              <!-- theist founder -->
+              <li>intro(tag=meme_SterileLife)              ->The [place_summary] [place_name] was first discovered by [deity0_name]'s grace, when a drunk starship captain almost crashed into it.</li>
+              <li>conflict(tag=meme_SterileLife)           ->A [foeLeader] despised the [memberNamePlural], and attempted to destroy them by releasing mind altering toxins into the air around them.</li>
+              <li>founderJoin(tag=meme_SterileLife)        ->When all seemed lost, [deity0_name] came to the prophet [founderName] to protect them from the evil toxins in the world, and gave [founder_objective] the unclouded perspective needed to defeat the [foeSoldiers].</li>
+              <li>victory(tag=meme_SterileLife)            ->The [foeLeader]'s [foeSoldiers], armed with [place_personalWeapon]s, raided the [place_community] of the [memberNamePlural]. [founderName] offered them a pure way to see the world, and the [foeSoldiers] put down their weapons.</li>
+              <!-- ideological founder -->
+              <li>setup(tag=meme_SterileLife)              ->Cast out from society, our founder [founderName] traveled into the jungle and ingested many medical herbs there. Free from the ailments that caused them to be cast out, [founder_pronoun] found truth inside [founder_possessive] now unclouded mind.</li>
+              <li>story(uses=1,tag=meme_SterileLife)       ->To deepen their understanding, [founderName] brought [founder_possessive] followers together every week to study the nature around them, and find new ways to save lives.</li>
+              <!-- ideological lesson -->
+              <li>lessonIntro(tag=meme_SterileLife)         ->Getting high only seems to cloud the mind, leaving us fumbling around in our lives. I found that</li>
+              <li>lesson(tag=meme_SterileLife)              ->a path can always be found by those who focus on the reality around them</li>
+              <li>lessonReinforcement(tag=meme_SterileLife) ->And when I had finally found myself free from drugs, everything became clear to me.</li>
+              <!-- archist -->
+              <li>archistBasis(tag=meme_SterileLife)       ->The archotech minds showed us that super-consciousness requires a clear mind free from clouding influences.</li>
+              <li>archistFact(tag=meme_SterileLife)        ->When devoid of chemical influences, the human mind has the potential to commune with the archotechs.</li>
+              <li>archistProphecy(tag=meme_SterileLife)    ->[inTheEnd], the archotechs will deliver each human a pill. Those that take it will find their minds forever clear, and join the archotechs on their final journey.</li>
+              <!-- animist -->
+              <li>animistFact(tag=meme_SterileLife)        ->The spirits can reveal their nature to us when we purge our bodies of the impurities so many depend upon.</li>
+            </rulesStrings>
+          </rules>
+        </descriptionMaker>
+        <symbolPacks>
+            <li>
+                <ideoName>Sterilism</ideoName>
+                <theme>sterile</theme>
+                <adjective>sterilist</adjective>
+                <member>sterilizer</member>
+            </li>
+            <li>
+                <ideoName>Purism</ideoName>
+                <theme>purity</theme>
+                <adjective>purist</adjective>
+                <member>purifier</member>
+            </li>
+        </symbolPacks>
+        <addDesignators>
+            <li>MISM_Autoimmunizer</li>
+        </addDesignators>
+        <agreeableTraits>
+            <DrugDesire>-1</DrugDesire>
+        </agreeableTraits>
+    </MemeDef>
+
+    <MemeGroupDef>
+        <defName>MISM_Welcome</defName>
+        <drawOffset>(0.37, 0.23)</drawOffset>
+        <maxRows>1</maxRows>
+        <renderOrder>70</renderOrder>
+    </MemeGroupDef>
+
+    <MemeDef>
+        <defName>MISM_Hospitality</defName>
+        <label>hospitality</label>
+        <description>We must do what we can to ensure those who visit our colony, do not feel unwelcome.</description>
+        <iconPath>MISM_Hospitality</iconPath>
+        <groupDef>MISM_Welcome</groupDef>
+        <impact>2</impact>
+        <renderOrder>71</renderOrder>
+        <exclusionTags>
+            <li>MISM_Welcome</li>
+        </exclusionTags>
+        <requireOne>
+            <li>
+                <li>Slavery_Disapproved</li>
+                <li>Slavery_Horrible</li>
+                <li>Slavery_Abhorrent</li>
+            </li>
+            <li>
+                <li>Charity_Essential</li>
+                <li>Charity_Important</li>
+                <li>Charity_Worthwhile</li>
+            </li>
+            <li>
+                <li>Execution_Abhorrent</li>
+                <li>Execution_Horrible</li>
+            </li>
+        </requireOne>
+        <generalRules>
+            <rulesStrings>
+                <li>memeAdjective->helping</li>
+                <li>memeHyphenPrefix->provide</li>
+                <li>memeConcept->helping</li>
+                <li>memeConcept->providing</li>
+                <li>memeLeaderNoun->provider</li>
+                <li>memeLeaderNoun->helper</li>
+                <li>memeMoralist->guider</li>
+            </rulesStrings>
+        </generalRules>
+        <descriptionMaker>
+        <rules>
+            <rulesStrings>
+                <!-- theist myth -->
+                <li>creation(tag=meme_Hosptiality)        ->In the endless war among deities, [deity0_name] rose above all in [deity0_possessive] ability to protect those spirits weaker than itself.</li>
+                <li>episode(uses=1,tag=meme_Hosptiality)  ->[deity0_name] guided the weaker spirits around [deity0_objective], and together they rose higher than ever.</li>
+                <!-- theist founder -->
+                <li>intro(tag=meme_Hosptiality)           ->The [place_summary] [place_name] was originally a raider hideout. [deity0_name] drove them away to turn the once dangerous place into a home of hope.</li>
+                <li>conflict(tag=meme_Hosptiality)        ->A [foeLeader] tried to force everyone into servitude, and declared [foeLeader_objective]self an enemy of [deity0_name].</li>
+                <li>founderJoin(tag=meme_Hosptiality)     ->A great leader named [founderName] arose, and [founder_possessive] followers joined [founderName] in [founder_possessive] to take [place_name] from the [foeSoldiers] and turn it into an unbreakable bastion of hope.</li>
+                <li>victory(tag=meme_Hosptiality)         ->[founderName] and the [memberNamePlural] repelled the [foeSoldiers] for many years without ever allowing themselve to stoop to their level, and eventually the [foeLeader] was forced to surrender as the [foeSoldiers] gradually gave up.</li>
+                <!-- ideological founder -->
+                <li>setup(tag=meme_Hosptiality)           ->Falsely persecuted and imprisoned, [founderName] managed to escaped, and formed a new colony, one which would never allow another suffer as much as [founder_objective].</li>
+                <li>story(uses=1,tag=meme_Hosptiality)    ->One day while walking the streets, [founderName] was surrounded by filthy beggars. [founder_pronoun] gave everything on [founder_possessive] person, and offered the beggars a new place in which they could always find hope for a better future.</li>
+                <!-- ideological lesson -->
+                <li>lessonIntro(tag=meme_Hosptiality)         ->All people have many lessons to offer you so long as you listen. One old lady taught me that</li>
+                <li>lesson(tag=meme_Hosptiality)              ->safety is never guaranteed, so you should offer solace for the defenseless whenever you can</li>
+                <li>lesson(tag=meme_Hosptiality)              ->material wealth is worthless compared to the satisfaction of giving to those without hope</li>
+                <li>lesson(tag=meme_Hosptiality)              ->life is a fragile thing, but together we can grow stronger</li>
+                <li>lessonReinforcement(tag=meme_Hosptiality) ->No matter who comes to request my help, they my home to be a welcoming place.</li>
+                <!-- archist -->
+                <li>archistBasis(tag=meme_Hosptiality)    ->The archotechs rose to the position they have today by working together, and ensuring none would fall behind simply because they could not fulfill their basic needs.</li>
+                <li>archistFact(tag=meme_Hosptiality)     ->The archotechs built a utopia by working as a team, and accepted all who approached them for aid as one of their own.</li>
+                <li>archistProphecy(tag=meme_Hosptiality) ->[inTheEnd], humanity will use an archotech relic, [relic0_name], to commune with the archotechs, who will bring aid to all who need it.</li>
+                <!-- animist -->
+                <li>animistFact(tag=meme_Hosptiality)     ->The most powerful spirits will often protect the weaker spirits from hostile ones, and those weaker spirits often guide desperate humans to hope to encourage humans to act the same.</li>
+                <li>animistProphecy(tag=meme_Hosptiality) ->Our universe will finalize when we unite as one and ensure none suffer unjustly, and every spirit sees it and joins us in celebration.</li>
+            </rulesStrings>
+        </rules>
+        </descriptionMaker>
+        <symbolPacks>
+            <li>
+                <ideoName>Helpism</ideoName>
+                <theme>helping</theme>
+                <adjective>helpful</adjective>
+                <member>helper</member>
+            </li>
+            <li>
+                <ideoName>Providism</ideoName>
+                <theme>providing</theme>
+                <adjective>providing</adjective>
+                <member>provider</member>
+            </li>
+        </symbolPacks>
+    </MemeDef>
+
+    <MemeGroupDef>
+        <defName>MISM_Bloodfeeders</defName>
+        <drawOffset>(0.37, 0.23)</drawOffset>
+        <maxRows>1</maxRows>
+        <renderOrder>999</renderOrder>
+    </MemeGroupDef>
+
+    <MemeDef MayRequire="Ludeon.Rimworld.Biotech">
+        <defName>MISM_Purifying</defName>
+        <label>purifying</label>
+        <description>Bloodfeeders are abominations that leech life from the innocent.</description> 
+        <iconPath>MISM_Purifying</iconPath>
+        <groupDef>MISM_Bloodfeeders</groupDef>
+        <impact>2</impact>
+        <renderOrder>998</renderOrder>
+        <exclusionTags>
+            <li>MISM_Bloodfeeders</li>
+        </exclusionTags>
+        <requireOne>
+            <li>
+                <li MayRequire="Ludeon.Rimworld.Biotech">Bloodfeeders_Reviled</li>
+            </li>
+            <li>
+                <li>Cannibalism_Abhorrent</li>
+                <li>Cannibalism_Horrible</li>
+            </li>
+            <li>
+                <li>Execution_DontCare</li>
+                <li>Execution_RespectedIfGuilty</li>
+                <li>Execution_Required</li>
+            </li>
+            <li>
+                <li>NutrientPasteEating_DontMind</li>
+            </li>
+            <li>
+                <li>Corpses_DontCare</li>
+            </li>
+        </requireOne>
+        <generalRules>
+            <rulesStrings>
+                <li>memeAdjective->purity</li>
+                <li>memeCreed->base</li>
+                <li>memeCreed->fortress</li>
+                <li>memeHyphenPrefix->pure</li>
+                <li>memeConcept->purity</li>
+                <li>memeConcept->fire</li>
+                <li>memeLeaderNoun->elder</li>
+                <li>memeLeaderNoun->champion</li>
+                <li>memeLeaderNoun->chief</li>
+                <li>memeMoralist->purifier</li>
+            </rulesStrings>
+        </generalRules>
+        <descriptionMaker>
+            <rules>
+                <rulesStrings>
+                    <!-- theist myth -->
+                    <li>creation(tag=meme_Purifier)        ->[deity0_name] fought bloodfeeding archotechs, attempting to purify the land of their sins.</li>
+                    <li>episode(uses=1,tag=meme_Purifier)  ->The [deity0_type] [deity0_name] gave to [deity0_possessive] chosen followers the gift of steel and fire, so they may go forth and purify the world of bloodfeeders in his name.</li>
+                    <!-- theist founder -->
+                    <li>intro(tag=meme_Purifier)           ->On the [place_summary] [place_name], there was a human named [deity0_name]. As punishment for [deity0_possessive] sins, [deity0_possessive] father punished [deity0_name] by purifying [deity0_possessive] soul of the Hunger that [deity0_name] had been born with, forcing [deity0_name] to think clearly for the first time.</li>
+                    <li>intro(tag=meme_Purifier)           ->On the [place_summary] [place_name], during the [ritualName], [deity0_name] came down into the [altarRoomLabel] and gifted the [memberNamePlural] blades that may cut off the heads of bloodfeeders, and fire that would purify the world of those corrupted with the desire for blood.</li> 
+                    <li>conflict(tag=meme_Purifier)        ->A [foeLeader] declared that all who drank blood could feast on whoever they pleased, and sent [foeSoldiers] to kill the [memberNamePlural].</li>
+                    <li>founderJoin(tag=meme_Purifier)     ->A [place_job] named [founderName] was attacked by some of the [foeLeader]'s [foeSoldiers]. [founderName] killed [foeLeader_objective] soldiers with a [place_personalWeapon] and set their bodies alight.</li>
+                    <li>victory(tag=meme_Purifier)         ->[founderName] led a group of [memberNamePlural] into the [place_powerCenter], killed [foeLeader] while they were drunk on blood, and burned [foeLeader_possessive] flesh. [deity0_name] made [founderName] a stronger blade, for [founderName] had proved his strength and dedication.</li>
+                    <!-- ideological founder -->
+                    <li>setup(tag=meme_Purifier)           ->[founderName] sought to purify humanity of the bloodfeeders that lurked within.</li>
+                    <li>story(uses=1,tag=meme_Purifier)    ->[founderName] gave [founder_possessive] followers blades so they may cut off the heads of the leeches, and torches so they may purify the world of bloodfeeders permanently.</li>
+                    <!-- ideological lesson -->
+                    <li>lessonIntro(tag=meme_Purifier)     ->When I first saw one of those monsters drink the blood of my family, it became clear. I saw that</li>
+                    <li>lesson(tag=meme_Purifier)          ->there are only two types of people - the weak and the strong</li>
+                    <li>lessonReinforcement(tag=meme_Purifier) ->To drink blood is an evil act that can only be stopped through force.</li>
+                    <!-- archist -->
+                    <li>archistBasis(tag=meme_Purifier)    ->The archotech god-machines cursed some with a unique bloodthirst, but those few have continued to leech off others for longer than expected.</li>
+                    <li>archistFact(tag=meme_Purifier)     ->As the consciousness of an archotech expands, it must fight off those leeches that try to drain its body.</li>
+                    <li>archistProphecy(tag=meme_Purifier) ->[inTheEnd], man shall grow closer to the archotechs by learning how to ensure no bloodfeeder has a chance to act like a parasite, and thereby purifying the world of their filth once and for all.</li>
+                    <!-- animist -->
+                    <li>animistBasis(tag=meme_Purifier)    ->Much like the [bloodDrinkingAnimal] that sucks out life like a parasite, bloodfeeders have no place amongst humans, and should be treated like the dangerous animals they are.</li>
+                    <li>animistFact(tag=meme_Purifier)     ->Much as we bleed when they bite, they will bleed when we stab, and burn as we purify them.</li>
+                    <!-- misc -->
+                    <li>bloodDrinkingAnimal->vampire bat</li>
+                    <li>bloodDrinkingAnimal->leech</li>
+                    <li>bloodDrinkingAnimal->lamprey</li>
+                    <li>bloodDrinkingAnimal->blood cobra</li>
+                </rulesStrings>
+            </rules>
+        </descriptionMaker>
+        <thingStyleCategories>
+            <li>
+                <category>Morbid</category>
+                <priority>3</priority>
+            </li>
+        </thingStyleCategories>
+        <symbolPacks>
+            <li>
+                <ideoName>Purism</ideoName>
+                <theme>purity</theme>
+                <adjective>purist</adjective>
+                <member>purifier</member>
+            </li>
+        </symbolPacks>
+        <startingResearchProjects>
+            <li>Smithing</li>
+        </startingResearchProjects>
+    </MemeDef>
+
+</Defs>
