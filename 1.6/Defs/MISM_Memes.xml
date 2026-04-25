@@ -512,7 +512,7 @@
     <MemeDef>
         <defName>MISM_Hospitality</defName>
         <label>hospitality</label>
-        <description>We must do what we can to ensure those who visit our colony, do not feel unwelcome.</description>
+        <description>We must do what we can to ensure those who visit our colony do not feel unwelcome.</description>
         <iconPath>MISM_Hospitality</iconPath>
         <groupDef>MISM_Welcome</groupDef>
         <impact>2</impact>
