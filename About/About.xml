@@ -28,7 +28,7 @@ This mod seeks to extend the meme options Ideology offers to offer the opposite 
 Unlike More Biotech Style Genes, this will not seek to create a full, in-depth, range of options from minor to major, but instead stick to just the extremes to avoid flooding the memes and precepts menu with too many options. 
 
 
-This adds 6-7 Memes and 5 Precepts.
+This adds 6-7 Memes and 6 Precepts.
 
 - Adds Farmer Meme, opposite of Rancher. Adds a related Ranching Hated precept
 - Adds Hospitality Meme, opposite of Raider
@@ -40,6 +40,7 @@ This adds 6-7 Memes and 5 Precepts.
 - For those with Biotech, adds Purifying meme, opposite of Bloodfeeding
 - Updates Flesh Purity and Transhumanist to correctly display as mutually exclusive in the ideology menu
   - Flesh Purity is still incompatible with High Life, but High Life is not moved to the category
+- Adds a Body Modification (Required) precept, a stronger version version of approved, which transhumanists memes can now pick if so desired. Unlike the approved version that reaches a maximum of +3 mood at 5 prosthetics, this reaches +10 at 10 prosthetics, but experience -10 mood when unmodded and -10 opinion of those who are unmodded (as opposed to the normal -3/-3). For those who want to create an ideology that actually exalts the machine enhanced body
 
 [url=https://discord.gg/fYP8qkcNDh]Discord link[/url] for those who want an easier way to ask questions, make requests, or just chat. I'll also be posting new releases there.
 

@@ -199,4 +199,8 @@
         </value>
     </Operation>
 
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/MemeDef[defName="Transhumanist"]/requireOne/li[li/text()="BodyMod_Approved"]</xpath>
+        <value><li>BodyMod_Required</li></value>
+    </Operation>
 </Patch>
