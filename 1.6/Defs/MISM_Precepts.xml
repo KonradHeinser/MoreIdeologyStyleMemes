@@ -337,6 +337,9 @@
       <li Class="PreceptComp_SituationalThought">
         <thought>HasNoProsthetic_Hated_Social</thought>
       </li>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>HasProsthetic_Required_Social</thought>
+      </li>
     </comps>
   </PreceptDef>
 
@@ -366,6 +369,22 @@
       <li>
         <label>no artificial enhancement</label>
         <baseOpinionOffset>-10</baseOpinionOffset>
+      </li>
+    </stages>
+    <nullifyingTraits>
+      <li>BodyPurist</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>HasProsthetic_Required_Social</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>ThoughtWorker_Precept_HasProsthetic_Social</workerClass>
+    <minExpectation>Moderate</minExpectation>
+    <stages>
+      <li>
+        <label>artificial enhancement</label>
+        <baseOpinionOffset>+5</baseOpinionOffset>
       </li>
     </stages>
     <nullifyingTraits>
