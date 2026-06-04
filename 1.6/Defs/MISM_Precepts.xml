@@ -318,7 +318,7 @@
     <issue>BodyModification</issue>
     <label>required</label>
     <description>Humans must shed their weak flesh to become one step closer to the machine. There is no constancy in flesh, only decay.</description>    <!--Yes, that is a warhammer reference-->
-    <impact>Medium</impact>
+    <impact>High</impact>
     <displayOrderInIssue>-10</displayOrderInIssue>
     <displayOrderInImpact>100</displayOrderInImpact>
     <conflictingMemes>
