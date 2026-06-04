@@ -380,7 +380,6 @@
     <defName>HasProsthetic_Required_Social</defName>
     <thoughtClass>Thought_SituationalSocial</thoughtClass>
     <workerClass>ThoughtWorker_Precept_HasProsthetic_Social</workerClass>
-    <minExpectation>Moderate</minExpectation>
     <stages>
       <li>
         <label>artificial enhancement</label>
