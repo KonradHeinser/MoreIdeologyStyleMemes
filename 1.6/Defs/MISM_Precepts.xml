@@ -383,7 +383,7 @@
     <stages>
       <li>
         <label>artificial enhancement</label>
-        <baseOpinionOffset>+5</baseOpinionOffset>
+        <baseOpinionOffset>5</baseOpinionOffset>
       </li>
     </stages>
     <nullifyingTraits>
