@@ -203,4 +203,11 @@
         <xpath>Defs/MemeDef[defName="Transhumanist"]/requireOne/li[li/text()="BodyMod_Approved"]</xpath>
         <value><li>BodyMod_Required</li></value>
     </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/PreceptDef[defName="FungusEating_Despised"]/defaultSelectionWeight</xpath>
+        <match Class="PatchOperationRemove">
+            <xpath>Defs/PreceptDef[defName="FungusEating_Despised"]/defaultSelectionWeight</xpath>
+        </match>
+    </Operation>
 </Patch>
